@@ -1,17 +1,9 @@
-.guide1{
+.guide1, .guide2, .guide3{
     border: 3px solid
 }
-.guide2{
-    border: 3px solid
+.top{
+    height: 10vh;
 }
-.guide3{
-    border: 3px solid
-}
-
-.info{
-    height: 50vh;
-}
-
-.guide{
-    height: 50vh;
+.info, .guide{
+    height: 45vh;
 }
