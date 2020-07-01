@@ -2,11 +2,14 @@
     border-radius: 30px;
     margin: 0 auto;
     background-color: #E6E6FA;
-    transition: 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
 }
-.guide1:hover { background-color: #8B00FF; transform: scale(1.1);}
-.guide2:hover { background-color: #8B00FF; transform: scale(1.1);}
-.guide3:hover { background-color: #8B00FF; transform: scale(1.1);}
+.guide1:hover, .guide2:hover, .guide3:hover {
+    background-color: #8B00FF;
+    transform:
+    scale(1.05);
+    z-index: 1;
+}
 
 .info, .guide{
     height: 40vh;
