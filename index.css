@@ -1,9 +1,56 @@
 .guide1, .guide2, .guide3{
-    border: 3px solid
+    border-radius: 30px;
+    margin: 0 auto;
+    background-color: #E6E6FA;
+    transition: 0.5s;
 }
-.top{
-    height: 10vh;
-}
+.guide1:hover { background-color: #8B00FF; transform: scale(1.1);}
+.guide2:hover { background-color: #8B00FF; transform: scale(1.1);}
+.guide3:hover { background-color: #8B00FF; transform: scale(1.1);}
+
 .info, .guide{
-    height: 45vh;
+    height: 40vh;
+    margin: 0 auto;
 }
+.button1 {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:#8B00FF;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  .button1:hover {background-color: #3e8e41}
+  
+  .button1:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  .button2 {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:black;
+    background-color:white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  .button2:hover {background-color:pink}
+  
+  .button2:active {
+    background-color:pink;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
