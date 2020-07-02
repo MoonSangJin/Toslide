@@ -1,31 +1,43 @@
+.toslide{
+  font-family: Jost;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f3fea;
+  margin-left: 10%;
+}
 .guide1, .guide2, .guide3{
-    border-radius: 30px;
-    margin: 0 auto;
-    background-color: #E6E6FA;
-    transition: transform 0.5s, background-color 0.5s;
+  border-radius: 20px;
+  background-color: rgba(63, 63, 234, 0.2);
+  transition: transform 0.5s, background-color 0.5s;
 }
 .guide1:hover, .guide2:hover, .guide3:hover {
-    background-color: #8B00FF;
-    transform:
-    scale(1.05);
-    z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #b1b1f7;
+  transform: scale(1.05);
+  z-index: 1;
 }
-
+.main{
+  height: 100vh;
+}
 .info, .guide{
-    height: 40vh;
     margin: 0 auto;
 }
-.button1 {
+.button1, .translate {
     display: inline-block;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color:#8B00FF;
     border: none;
     border-radius: 5px;
-    margin: 0 auto;
+    background-color: #4831f3;
   }
   
   .button1:hover {background-color: #3e8e41}
@@ -56,4 +68,88 @@
     background-color:pink;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  }
+
+  .nav-link, .navbar-brand{
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  }
+
+  .lang{
+  font-family: Roboto;
+  font-size: 2rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f3fea;
+  }
+
+  .right1{
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4831f3;
+  }
+
+  .right2{
+  font-family: Roboto;
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  }
+
+  .right3{
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  }
+
+  .right4{
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  }
+
+  .OTUG, .AQUG, .OCUG{
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3e3e3e;
   }
