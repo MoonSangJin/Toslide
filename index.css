@@ -1,15 +1,4 @@
-.toslide{
-  font-family: Jost;
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.44;
-  letter-spacing: normal;
-  text-align: left;
-  color: #3f3fea;
-  margin-left: 10%;
-}
+
 .guide1, .guide2, .guide3{
   border-radius: 20px;
   background-color: rgba(63, 63, 234, 0.2);
@@ -28,7 +17,7 @@
 .info, .guide{
     margin: 0 auto;
 }
-.button1, .translate {
+.button1{
     display: inline-block;
     cursor: pointer;
     text-align: center;
