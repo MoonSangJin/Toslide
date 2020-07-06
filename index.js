@@ -1,4 +1,4 @@
-var arrLang = {
+/*var arrLang = {
     'kor':
     {
         'home': 'korean'
@@ -17,4 +17,4 @@ $(function () {
             $(this).text(arrLang[lang][$(this).attr('key')]);
         });
     });
-});
+});*/
