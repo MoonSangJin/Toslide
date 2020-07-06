@@ -19,6 +19,7 @@
 
 .button1{
     display: inline-block;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -88,6 +89,7 @@
   }
 
   .right1{
+  display: inline-block;
   font-family: Roboto;
   font-size: 1.5rem;
   font-weight: 500;
@@ -97,6 +99,18 @@
   letter-spacing: normal;
   text-align: left;
   color: #4831f3;
+  }
+  .gmail{
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
   }
 
   .right2{
