@@ -163,9 +163,15 @@
 
   .translate-img{
     width: 90px;
+    cursor: pointer;
   }
   @media ( min-width: 992px){
     .translate-img{
       width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) { 
+    .right-id, .right2, .right3{
+      text-align: center;
     }
   }
