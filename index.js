@@ -3,6 +3,8 @@ var menubar = document.querySelectorAll(".nav-link");
 const KoreanMenu = new Array("청중 질의응답","온라인 강의","온라인 시험","사용 사례","연락처");
 const EngMenu = new Array("Audience Q&A", "Online Class","Online Test","Use Cases","Contact");
 
+
+
 function change_text() {
     if (change == 0) {
         document.querySelector('.translate-img').src="asset/img/eng.png"
@@ -25,9 +27,9 @@ function change_text() {
         document.querySelector('.audience').innerHTML = "Audience";
         document.querySelector('.lecture-id').innerHTML = "The lecture id : the part before @gmail.com of the lecturer.";
 
-        document.querySelector('.OTUG').innerHTML = "Online Test User Guide";
-        document.querySelector('.AQUG').innerHTML = "Audience Q&A User Guide";
-        document.querySelector('.OCUG').innerHTML = "Online Class User Guide";
+        document.querySelector('.OTUG').innerHTML = "Online Test Tutorial";
+        document.querySelector('.AQUG').innerHTML = "Audience Q&A Tutorial";
+        document.querySelector('.OCUG').innerHTML = "Online Class Tutorial";
         
         for(var i=0; i<menubar.length; i++){
             menubar[i].innerHTML = EngMenu[i];
