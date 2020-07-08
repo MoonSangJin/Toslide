@@ -4,7 +4,6 @@ const KoreanMenu = new Array("청중 질의응답","온라인 강의","온라인
 const EngMenu = new Array("Audience Q&A", "Online Class","Online Test","Use Cases","Contact");
 
 
-
 function change_text() {
     if (change == 0) {
         document.querySelector('.translate-img').src="asset/img/eng.png"

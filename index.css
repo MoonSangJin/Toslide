@@ -179,3 +179,12 @@
       width: 60%;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 1024px) { /* 패드 화면 */
+    .button1{
+      width: 30%;
+    }
+    .button2{
+      width: 43%;
+    }
+    }
