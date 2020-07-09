@@ -31,10 +31,10 @@
     background-color: #4831f3;
   }
   
-  .button1:hover {background-color: #3e8e41}
+  .button1:hover {background-color:#D8D8FB }
   
   .button1:active {
-    background-color: #3e8e41;
+    background-color: #D8D8FB ;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -57,10 +57,10 @@
     color: #3f3fea;
   }
   
-  .button2:hover {background-color:pink}
+  /* .button2:hover {background-color:pink} */
   
   .button2:active {
-    background-color:pink;
+    /* background-color:pink; */
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -89,7 +89,7 @@
   color: #3f3fea;
   }
 
-  .right1{
+  /* .right1{
   display: inline-block;
   font-family: Roboto;
   font-size: 1.5rem;
@@ -100,7 +100,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #4831f3;
-  }
+  } */
   .gmail{
   display: inline-block;
   font-family: Roboto;
@@ -115,15 +115,15 @@
   }
 
   .right2{
-  font-family: Roboto;
-  font-size: 1.05rem;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.35;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000000;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
   }
 
   .right3{

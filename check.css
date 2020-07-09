@@ -56,25 +56,17 @@
 
 .authentication{
     font-family: Roboto;
-  font-size: 1rem;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  text-align: left;
-  color: #a2a2a2;
+    font-size: 2rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
 }
-
-.userid, .userpw{
-    width: 50%;
-    height: 7%;
-  border-radius: 9px;
-  border: solid 2px #b7adff;
-}
-
 .login-button{
-    width: 50%;
+    width: 60%;
     height: 5%;
     border-radius: 9px;
     border: solid 1px #b7adff;
@@ -102,38 +94,14 @@
   color: #575757;
   cursor: pointer;
 }
-.mobile{
-  height: 100vh;
-}
-.row1{
-  height: 10vh;
-}
-.row2{
-  height: 90vh;
-}
-.back-home-mobile{
-  width: 14.4px;
-  height: 25.1px;
-  background-color: var(--purpley-blue);
-}
-.home-mobile{
-    font-family: Roboto;
-    font-size: 1rem;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.36;
-    letter-spacing: normal;
-    text-align: left;
-    color: #403fea;
-    cursor: pointer;
-}
 @media screen and (max-width: 768px) {  /* 모바일 화면 */
    .Communication{
        font-size: 2rem;
    }
+   .authentication{
+       font-size: 1.3rem;
+   }
   }
-
   @media (min-width: 768px) and (max-width: 1024px) { /* 패드 화면 */
     .Communication{
         font-size: 1.5rem;
