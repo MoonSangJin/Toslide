@@ -18,6 +18,7 @@ function change_text() {
         for(var i=0; i<menubar.length; i++){
             menubar[i].innerHTML = KoreanMenu[i];
         }
+        
         change = 1;
     }
     else {
