@@ -168,7 +168,7 @@
   }
   .video-tutorial{
     font-family: Roboto;
-    font-size: 3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -179,7 +179,7 @@
   }
   .video-tutorial2{
     font-family: Roboto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
@@ -189,6 +189,7 @@
     color: #4831f3;
   }
   .content1{
+    height: 80vh;
     border-radius: 20px;
     border: solid 1px #707070;
     background-color: #4831f3;
@@ -243,7 +244,7 @@
     color: #3c3c3c;
     }
   .video1{
-    height: 100vh;
+    height: 100%;
     background-image: url("asset/img/video.png");
     background-size: cover;
     background-position: center;
