@@ -1,4 +1,8 @@
+/* regi.html도 이 css 이용 */
 
+body{
+  overflow: hidden;
+}
 .Communication{
     background-image: url("asset/img/left-back.png");
     background-size: cover;
@@ -127,6 +131,18 @@
     text-align: left;
     color: #403fea;
     cursor: pointer;
+}
+
+.for-delete{
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
 }
 @media screen and (max-width: 768px) {  /* 모바일 화면 */
    .Communication{

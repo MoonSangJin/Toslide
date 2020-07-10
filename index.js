@@ -24,7 +24,7 @@ function change_text() {
         document.querySelector('.translate-img').src="asset/img/kor.png"
         document.querySelector('.lecturer').innerHTML = "Lecturer";
         document.querySelector('.audience').innerHTML = "Audience";
-        document.querySelector('.lecture-id').innerHTML = "Lecturer Id is lecturer's google account.";
+        document.querySelector('.lecture-id').innerHTML = "Lecturer Id : Google account of the lecturer";
 
         document.querySelector('.OTUG').innerHTML = "Online Test Tutorial";
         document.querySelector('.AQUG').innerHTML = "Audience Q&A Tutorial";
