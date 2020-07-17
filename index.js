@@ -38,3 +38,21 @@ function change_text() {
     }
 
 }
+
+$(document).ready(function () {
+    var url = $("#Geeks3").attr('src');
+    $("#Geeks2").on('hide.bs.modal', function () {
+        $("#Geeks3").attr('src', '');
+    });
+    $("#Geeks2").on('show.bs.modal', function () {
+        $("#Geeks3").attr('src', url);
+    });
+}); 
+
+changesrc1=()=>{
+    document.querySelector("#Geeks3").setAttribute("src","https://www.youtube.com/embed/dgCOWqeXYIg");
+}
+changesrc2=()=>{
+    document.querySelector("#Geeks3").setAttribute("src","https://www.youtube.com/embed/1-ZuUMrBpjo");
+}
+

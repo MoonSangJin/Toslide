@@ -2,85 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>
+        Embedding YouTube video in Bootstrap modal
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .bs-example {
+            margin: 20px;
         }
 
-        button {
-            all: unset;
-            background-color: steelblue;
-            color: white;
-            padding: 5px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
         }
-
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal__overlay{
-            background-color: rgba(0, 0, 0, 0.6);
-            width: 100%;
-            height: 100%;
-            position:absolute;
-        }
-
-        .modal__content{
-            background-color: white;
-            padding: 50px 100px;
-            text-align: center;
-            position: relative;
-            border-radius: 10px;
-            width: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        }
-        h1{
-            margin: 0;
-        }
-        .hidden{
-            display: none;
-        }
-        .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; } .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
     </style>
+    <script>
+        $(document).ready(function () {
+            var url = $("#Geeks3").attr('src');
+            $("#Geeks2").on('hide.bs.modal', function () {
+                $("#Geeks3").attr('src', '');
+            });
+            $("#Geeks2").on('show.bs.modal', function () {
+                $("#Geeks3").attr('src', url);
+            });
+        }); 
+    </script>
 </head>
 
 <body>
-    <button id="open">Open Modal</button>
-    <div class="modal hidden">
-        <div class="modal__overlay"></div>
-        <div class="modal__content">
-            <button>❌</button>
-            <div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/uLgY05eOnqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <a href="#Geeks2" data-toggle="modal"><button>launch</button></a>
+        
+        <div class="bs-example">
+            <div id="Geeks2" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <iframe id="Geeks3" width="100%" height="350" src="https://www.youtube.com/embed/dgCOWqeXYIg"
+                                frameborder="0" allowfullscreen>
+                            </iframe>
+                            <button onclick="changesrc()" class="lecturer_btn">lecturer</button>
+                            <button>audience</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    
 
-    <script>
-        const openButton = document.getElementById("open");
-        const modal = document.querySelector(".modal");
-        const overlay = modal.querySelector(".modal__overlay");
-        const closeBtn = modal.querySelector("button");
-        const openModal=()=>{
-            modal.classList.remove("hidden");
+        <script>
+        changesrc=()=>{
+            document.querySelector("#Geeks3").setAttribute("src","https://www.youtube.com/embed/OnnLkyFg1mI");
         }
-        const closeModal = () =>{
-            modal.classList.add("hidden");
-        }
-        overlay.addEventListener("click", closeModal);
-        closeBtn.addEventListener("click", closeModal);
-        openButton.addEventListener("click",openModal);
-    </script>
+        </script>
 </body>
 
 </html>
