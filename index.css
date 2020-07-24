@@ -281,6 +281,51 @@
   .phone-image{
     width: 7%;
   }
+
+  .WOUS{
+  font-family: Roboto;
+  font-size: 3rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f3fea;
+  }
+  .wous-row{
+  width: 100%;
+  height: 0;
+  border: solid 1px #707070;
+  }
+  .user-pa{
+    border-radius: 15px;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+  }
+  .user-content{
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    margin: 0 auto;
+  }
+  .user-who{
+    font-family: Roboto;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: right;
+    color: #525252;
+  }
   @media ( min-width: 992px){
     .translate-img{
       width: 100%;
@@ -311,3 +356,4 @@
       width: 43%;
     }
     }
+.w
