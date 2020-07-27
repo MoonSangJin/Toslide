@@ -294,7 +294,7 @@
   color: #3f3fea;
   }
   .wous-row{
-  width: 100%;
+  width: 90%;
   height: 0;
   border: solid 1px #707070;
   }
@@ -326,6 +326,51 @@
     text-align: right;
     color: #525252;
   }
+  .graph-border{
+    border-radius: 15px;
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+  }
+  .graph-pa{
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3f3fea;
+  }
+  .graph-bottom{
+    display: flex; 
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.24;
+    letter-spacing: normal;
+    text-align: left;
+    color: #626262;
+  }
+  .graph-bottom2{
+    font-family: Roboto;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.04;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+  }
+  .percent{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3f3fea;
+  }
   @media ( min-width: 992px){
     .translate-img{
       width: 100%;
@@ -345,7 +390,15 @@
     .phone-image{
       width: 13%;
     }
-    
+    .user-img{
+      display: none;
+    }
+    .WOUS{
+      font-size: 2rem;
+    }
+    .graph-pa{
+      font-size: 1.3rem;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) { /* 패드 화면 */
