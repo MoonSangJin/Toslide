@@ -399,6 +399,12 @@
     .graph-pa{
       font-size: 1.3rem;
     }
+    .graph-bottom2{
+      font-size: 0.9rem;
+    }
+    percent{
+      font-size: 1.3rem;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) { /* 패드 화면 */
