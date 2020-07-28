@@ -326,6 +326,12 @@
     text-align: right;
     color: #525252;
   }
+  .user-satisfygraphicon{
+    width: 16rem;
+  }
+  .user-satisfygraph{
+    width: 60%;
+  }
   .graph-border{
     border-radius: 15px;
     box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
@@ -393,17 +399,23 @@
     .user-img{
       display: none;
     }
+    .user-satisfygraphicon{
+      width: 10rem;
+    }
+    .user-satisfygraph{
+      width: 90%;
+    }
     .WOUS{
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     .graph-pa{
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     .graph-bottom2{
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
-    percent{
-      font-size: 1.3rem;
+    .percent{
+      font-size: 1.1rem;
     }
   }
 
