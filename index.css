@@ -414,10 +414,12 @@
       display: none;
     }
     .user-satisfygraphicon{
-      width: 10rem;
+      width: 230px;
+      height: 70px;
     }
     .user-satisfygraph{
-      width: 90%;
+      width: 350px;
+      height: 200px;
     }
     .WOUS{
       font-size: 1.5rem;
