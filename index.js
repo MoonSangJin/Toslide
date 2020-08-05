@@ -7,8 +7,8 @@ const EngMenu = new Array("Audience Q&A", "Online Class","Online Test","Use Case
 function change_text() {
     if (change == 0) {
         document.querySelector('.translate-img').src="asset/img/eng.png"
-        document.querySelector('.lecturer').innerHTML = "강사로 참여";
-        document.querySelector('.audience').innerHTML = "청중으로 참여";
+        document.querySelector('.lecturer').innerHTML = "강사";
+        document.querySelector('.audience').innerHTML = "청중";
         document.querySelector('.lecture-id').innerHTML = "강사아이디 : 강사의 Gmail/@gmail.com 의 앞부분";
 
         document.querySelector('.OTUG').innerHTML = "온라인 시험 사용법";
