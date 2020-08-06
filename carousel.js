@@ -14,5 +14,5 @@ function slide(){
         firstSlide.classList.add(SHOWING_CLASS);
     }
 }
-    slide();
-    setInterval(slide,2000);
+slide();
+setInterval(slide,2500);
