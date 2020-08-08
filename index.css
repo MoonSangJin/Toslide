@@ -299,6 +299,8 @@
   border: solid 1px lightgray;
   }
   .user-pa{
+    width: 500px;
+    height: 350px;
     border-radius: 15px;
     box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
@@ -442,6 +444,10 @@
     }
     .percent{
       font-size: 1.1rem;
+    }
+    .user-pa{
+      width: 350px;
+      height: 400px;
     }
   }
 
