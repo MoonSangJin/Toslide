@@ -305,6 +305,9 @@
     box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
   }
+  .restsign{
+    width: 1.5rem;
+  }
   .user-content{
     font-family: Roboto;
     font-size: 0.8rem;
@@ -447,7 +450,11 @@
     }
     .user-pa{
       width: 350px;
-      height: 400px;
+      height: 430px;
+    }
+    .restsign{
+      width: 30px;
+      height: 30px;
     }
   }
 
