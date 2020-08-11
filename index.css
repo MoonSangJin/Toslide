@@ -16,6 +16,9 @@
 .info, .guide{
     margin: 0 auto;
 }
+.translate-img-mobile{
+  display: none;
+}
 
 .button1{
     width: 25%;
@@ -411,7 +414,7 @@
       width: 100%;
     }
   }
-  @media screen and (max-width: 768px) { 
+  @media screen and (max-width: 768px) { /* mobile */
     .right-id, .right2, .right3{
       text-align: center;
     }
@@ -456,6 +459,12 @@
       width: 30px;
       height: 30px;
     }
+    .translate-img-mobile{
+      display: inline;
+    }
+    .translate-img-pc{
+      display: none;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 1024px) { /* 패드 화면 */
@@ -465,4 +474,7 @@
     .button2{
       width: 43%;
     }
+    .translate-img-mobile{
+      display: inline;
     }
+  }
