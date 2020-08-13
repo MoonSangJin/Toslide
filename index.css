@@ -16,6 +16,8 @@
 .info, .guide{
     margin: 0 auto;
 }
+
+/* 한영 버튼 08/13*/
 .translate-img-mobile{
   display: none;
 }
@@ -335,7 +337,7 @@
     color: #525252;
   }
 
-  /* 사용자 만족도 그래프 css코드 pc용*/
+  /* 사용자 만족도 그래프 css코드 pc용  08/13 */
   .user-satisfygraphicon{
     width: 16rem;
   }
@@ -404,7 +406,7 @@
 }
 
 
-/* text carousel css 코드*/
+/* text carousel css 코드  08/13 */
 .slider{
     width: 100%;
     position: relative;
@@ -442,7 +444,7 @@
       display: none;
     }
 
-    /* 사용자 만족도 그래프 css 코드 mobile용*/
+    /* 사용자 만족도 그래프 css 코드 mobile용  08/13 */
     .user-satisfygraphicon{
       width: 230px;
       height: 70px;
@@ -473,6 +475,8 @@
       width: 30px;
       height: 30px;
     }
+
+    /* 한영버튼 for mobile 08/13 */
     .translate-img-mobile{
       display: inline;
     }
@@ -488,6 +492,8 @@
     .button2{
       width: 43%;
     }
+
+    /* 한영버튼 for tablet pc 08/13 */
     .translate-img-mobile{
       display: inline;
     }
