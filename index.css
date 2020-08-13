@@ -334,12 +334,17 @@
     text-align: right;
     color: #525252;
   }
+
+  /* 사용자 만족도 그래프 css코드 pc용*/
   .user-satisfygraphicon{
     width: 16rem;
   }
   .user-satisfygraph{
     width: 60%;
   }
+
+
+
   .graph-border{
     border-radius: 15px;
     box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.16);
@@ -397,6 +402,9 @@
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='1B1E23' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
+
+
+/* text carousel css 코드*/
 .slider{
     width: 100%;
     position: relative;
@@ -408,6 +416,8 @@
 .showing{
   display: inline;
 }
+
+
 
   @media ( min-width: 992px){
     .translate-img{
@@ -431,6 +441,8 @@
     .user-img{
       display: none;
     }
+
+    /* 사용자 만족도 그래프 css 코드 mobile용*/
     .user-satisfygraphicon{
       width: 230px;
       height: 70px;
@@ -439,6 +451,8 @@
       width: 350px;
       height: 200px;
     }
+
+
     .WOUS{
       font-size: 1.5rem;
     }
