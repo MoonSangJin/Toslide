@@ -10,4 +10,4 @@
 >   >## Server using Firebase (INCOMPLETE)
 >   >   >toslide.firebaseapp.com
 
-![Alt text](toslide-main.png)
+![Welcome to toslide!](toslide-main.png)
