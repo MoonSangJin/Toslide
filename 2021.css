@@ -23,6 +23,16 @@
   flex-direction: column;
   justify-content: center;
 }
+.logOut {
+  width: 60px;
+  border: 1px solid #dadce0;
+  border-radius: 30px;
+  background-color: #dadce0;
+  font: normal 12px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  text-align: center;
+}
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 8px #0000001a;
