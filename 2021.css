@@ -21,13 +21,14 @@
   justify-content: center;
 }
 .logOut {
+  display: flex;
+  align-items: center;
   width: 55px;
   height: 20px;
   background: #f4f5f6 0% 0% no-repeat padding-box;
   border: 1px solid #dadce0;
   border-radius: 13px;
   text-align: center;
-  font: normal 12px Roboto;
 }
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
