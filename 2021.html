@@ -21,11 +21,6 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 768px)"
-      href="mystyle.css"
-    />
 
     <link href="2021.css" rel="stylesheet" />
   </head>
@@ -84,26 +79,40 @@
           </div>
           <div class="third">
             <div
-              class="roundBox d-flex justify-content-around align-items-center"
+              class="roundBox d-flex justify-content-between align-items-center p-2"
             >
               gmail
               <div class="logOut">로그아웃</div>
             </div>
             <div
-              class="roundBox d-flex justify-content-around align-items-center"
+              class="roundBox d-flex justify-content-between align-items-center p-2"
             >
               <img class="modeIcon" src="asset\img-2021\PNG_접속인원수.png" />
               <div class="menuText">접속인원</div>
-              <img
-                class="modeIcon"
-                src="asset\img-2021\PNG_드롭다운버튼_진회색.png"
-              />
+
+              <div class="logOut">자세히보기</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bottom">image</div>
+    <div class="bottom">
+      <div class="message">
+        <div class="d-flex justify-content-around mt-3">
+          <div class="messageFile">메시지파일</div>
+          <div class="messageIcon">
+            <img class="modeIcon mr-1" src="asset\img-2021\PNG_메세지.png" />
+            메세지
+          </div>
+          <img class="modeIcon" src="asset\img-2021\PNG_닫기버튼_진회색.png" />
+        </div>
+        <div>switch</div>
+        <div>sort</div>
+        <div>message</div>
+        <div>이전메시지</div>
+        <div>개인 메시지 전송</div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -122,6 +131,5 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="login.js"></script>
   </body>
 </html>
