@@ -72,6 +72,9 @@
   letter-spacing: 0px;
   color: #000000;
 }
+.square:hover {
+  cursor: pointer;
+}
 .menuImage {
   width: 38px;
   height: 38px;
@@ -88,11 +91,13 @@
 .bottom {
   width: 100%;
   height: 90vh;
-  /* background-color: blue; */
+  background-color: blue;
 }
 .message {
-  width: 375px;
   float: right;
+}
+.messageTop {
+  background: #f4f5f6 0% 0% no-repeat padding-box;
 }
 .messageFile {
   display: flex;
@@ -137,8 +142,116 @@
     height: 20px;
   }
   .logOut {
-    width: 45px;
+    width: 55px;
     height: 15px;
     font-size: 5px;
   }
+}
+
+.toslide-btn-group {
+  width: 95%;
+  background: #dadce0 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.toslide-btn-group label {
+  all: unset;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+  font: normal normal bold 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  padding: 5px;
+}
+
+.toslide-btn-group .radio-input {
+  all: unset;
+}
+
+.toslide-btn-group .radio-input:checked + label {
+  background-color: white;
+  box-shadow: 0px 0.5px 3px #00000033;
+}
+.sortBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100px;
+  height: 26px;
+  background: #fafafb 0% 0% no-repeat padding-box;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.checkLabel {
+  all: unset;
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.messageFont {
+  font: normal normal normal 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #7c7d80;
+}
+.purpleFont {
+  width: 70px;
+  border: 1px solid #4535f3;
+  border-radius: 13px;
+  text-align: center;
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #4535f3;
+}
+.question {
+  font: normal normal normal 14px/20px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.messageClose {
+  width: 34px;
+  height: 34px;
+}
+.messageRoundBox {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0.5px 3px #00000033;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.messagePost {
+  height: 26px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0.5px 3px #00000033;
+  border-radius: 5px;
+}
+.messageRow {
+  background-color: white;
+  border: 1px solid #dadce0;
+}
+.messageFont {
+  font: normal normal normal 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.prevMessage {
+  font: normal normal medium 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.purpleMessage {
+  background: #4535f3 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.purpleMessageFont {
+  font: normal normal normal 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
 }
