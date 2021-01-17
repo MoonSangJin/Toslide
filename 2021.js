@@ -11,7 +11,7 @@ const toggle = () => {
     $('.message').hide();
   }
 };
-
+/*check */
 const toggleGather = () => {
   if (gathering) {
     gatherToggleBtn.src = 'asset/img-2021/PNG_수합중지.png';
