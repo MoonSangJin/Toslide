@@ -1,6 +1,7 @@
 const messageToggleBtn = document.getElementById('toggleMessage');
 const gatherToggleBtn = document.getElementById('toggleGather');
 const gatherToggleText = document.getElementById('toggleGatherText');
+const closeButton = document.getElementById('closeButton');
 let gathering = false;
 
 const toggle = () => {
@@ -25,4 +26,5 @@ const toggleGather = () => {
   }
 };
 messageToggleBtn.onclick = toggle;
+closeButton.onclick = toggle;
 gatherToggleBtn.onclick = toggleGather;
