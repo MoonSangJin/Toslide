@@ -121,7 +121,7 @@
       <div class="d-flex justify-content-around p-2">
         <div class="messagePost d-flex align-items-center pr-2">
           <img class="messageClose" src="asset\img-2021\PNG_보내기_검정.png" />
-          <div class="messageFont">개인 메세지 전송</div>
+          <div id="open" class="messageFont">개인 메세지 전송</div>
         </div>
 
         <div class="messagePost d-flex align-items-center pr-2">
@@ -138,6 +138,52 @@
             src="asset\img-2021\PNG_모두삭제_검정.png"
           />
           <div class="messageFont">메세지 모두 삭제</div>
+        </div>
+        <div class="modal hidden">
+          <div class="md_overlay"></div>
+          <div class="md_content">
+            <div
+              class="modal_text d-flex align-items-center justify-content-around"
+            >
+              <div class="blank"></div>
+              <div class="d-flex align-items-center">
+                <img
+                  class="messageClose"
+                  src="asset\img-2021\PNG_보내기_검정.png"
+                />
+                <div id="open" class="modalMessage">개인 메세지 전송</div>
+              </div>
+              <button class="modalClose">
+                <img
+                  class="messageClose"
+                  src="asset\img-2021\PNG_닫기버튼_진회색.png"
+                />
+              </button>
+            </div>
+            <hr
+              style="
+                border: 1px color= silver;
+                margin-top: 3px;
+                margin-bottom: 3px;
+              "
+              width="100%"
+            />
+            <div class="d-flex flex-column">
+              <div
+                class="messageObject d-flex justify-content-around align-items-center p-3"
+              >
+                <div class="d-flex flex-column">
+                  <div class="purpleFont mb-1">Rendering</div>
+                  <div class="question">랜더링관련질문입니다.</div>
+                </div>
+                <div class="messageFont mb-3">B611061 문상진</div>
+                <img
+                  class="messageClose"
+                  src="asset\img-2021\PNG_닫기버튼_진회색.png"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -159,6 +205,6 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="login.js"></script>
+    <script src="message.js"></script>
   </body>
 </html>

@@ -189,6 +189,44 @@
   color: #ffffff;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.md_overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.md_content {
+  width: 100%;
+  margin: 15px;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+.modalClose {
+  all: unset;
+}
+.hidden {
+  display: none;
+}
+.modalMessage {
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1200px) {
   .square {
     width: 61px;
