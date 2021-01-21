@@ -1,7 +1,8 @@
 .logOut,
 .square,
 .menuText,
-.messageClose:hover {
+.messageClose,
+.messageFont:hover {
   cursor: pointer;
 }
 
@@ -56,7 +57,6 @@
 
 .message {
   background: #f4f5f6 0% 0% no-repeat padding-box;
-  height: 100vh;
 }
 .messageFile {
   display: flex;
@@ -226,7 +226,22 @@
   color: #000000;
   opacity: 1;
 }
-
+.modalFont {
+  font: normal normal normal 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #7c7d80;
+}
+.modalQuestion {
+  font: normal normal bold 14px/20px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  text-align: left;
+}
+.modalAnswer {
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+}
 @media screen and (max-width: 1200px) {
   .square {
     width: 61px;
