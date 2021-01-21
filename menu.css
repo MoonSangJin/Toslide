@@ -87,7 +87,12 @@
   height: 80%;
   border: 1px solid #dadce0;
 }
-
+#gmail {
+  display: block;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
 @media screen and (max-width: 1200px) {
   .square {
     width: 61px;
