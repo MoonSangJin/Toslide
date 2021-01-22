@@ -42,7 +42,6 @@
             class="radio-input js-student-check"
             name="toslide-radio-btn"
             id="btnradio1"
-            data-mode="student"
           />
           <label class="inputLabel text-center" for="btnradio1">키워드</label>
           <input
@@ -50,7 +49,6 @@
             class="radio-input js-non-student-check"
             name="toslide-radio-btn"
             id="btnradio2"
-            data-mode="non-student"
           />
           <label class="inputLabel text-center" for="btnradio2">메세지</label>
         </div>
@@ -74,9 +72,7 @@
       </div>
 
       <div class="messageRow d-flex flex-column">
-        <div
-          class="messageObject d-flex justify-content-around align-items-center p-3"
-        >
+        <div id="messageObject1" class="messageObject">
           <div class="messageFont">01</div>
           <div class="d-flex flex-column">
             <div class="purpleFont mb-1">Rendering</div>
@@ -88,6 +84,41 @@
             class="messageClose"
             src="asset/img-2021/close_gray.png"
           />
+        </div>
+
+        <div id="keywordRow" class="keywordRow hidden">
+          <div class="keywordWrapper pt-3">
+            <div
+              class="keywordObject d-flex justify-content-between align-items-center"
+            >
+              <div class="keyword ml-2">Rendering</div>
+              <img
+                class="keywordClose"
+                src="asset/img-2021/close_ligh_blue.png"
+              />
+            </div>
+
+            <div
+              class="keywordObject d-flex justify-content-between align-items-center"
+            >
+              <div class="keyword ml-2">Animation</div>
+              <img
+                class="keywordClose"
+                src="asset/img-2021/close_ligh_blue.png"
+              />
+            </div>
+
+            <div
+              class="keywordObject d-flex justify-content-between align-items-center"
+            >
+              <div class="keyword ml-2">Design</div>
+              <img
+                class="keywordClose"
+                src="asset/img-2021/close_ligh_blue.png"
+              />
+            </div>
+            <img class="keywordPlus" src="asset/img-2021/plus_button.png"/>
+          </div>
         </div>
       </div>
       <div class="messageRoundBox d-flex m-3 p-1 justify-content-around">
@@ -139,9 +170,9 @@
                 <img class="messageClose" src="asset/img-2021/send_black.png" />
                 <div id="open" class="modalMessage">개인 메세지 전송</div>
               </div>
-              <button class="modalClose">
+              <div class="modalClose">
                 <img class="messageClose" src="asset/img-2021/close_gray.png" />
-              </button>
+              </div>
             </div>
             <hr
               style="
@@ -186,10 +217,10 @@
                 <div
                   class="d-flex justify-content-between align-items-center p-2 ml-2"
                 >
-                  <div class="modalAnswer">
-                    참고로 애니메이션은 애니메이션이랍니다.
-                  </div>
+                  <input class="modalAnswer">
+                  </input>
                   <img
+                    id="messageSend"
                     class="messageClose"
                     src="asset/img-2021/send_button@3x.png"
                   />

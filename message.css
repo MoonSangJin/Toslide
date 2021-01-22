@@ -165,6 +165,12 @@
   background-color: white;
   border: 1px solid #dadce0;
 }
+.messageObject {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
 .messageFont {
   font: normal normal normal 12px/14px Roboto;
   letter-spacing: 0px;
@@ -238,9 +244,30 @@
   text-align: left;
 }
 .modalAnswer {
+  width: 85%;
+  height: 100%;
   font: normal normal bold 12px/14px Roboto;
   letter-spacing: 0px;
   color: #000000;
+}
+.keywordWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.keywordObject {
+  border: 1px solid #4535f340;
+  border-radius: 15px;
+  font: normal normal bold 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #4535f3;
+}
+.keywordClose {
+  width: 26px;
+  height: 26px;
+}
+.keywordPlus {
+  width: 28px;
+  height: 30px;
 }
 @media screen and (max-width: 1200px) {
   .square {
