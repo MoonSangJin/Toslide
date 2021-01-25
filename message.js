@@ -10,6 +10,12 @@ const keywordButton = document.getElementById('btnradio1');
 const messageButton = document.getElementById('btnradio2');
 const keywordRow = document.getElementById('keywordRow');
 
+const openLectureModalButton = document.getElementById('openLectureModal');
+const lectureModal = document.querySelector('.lectureModal');
+const lectureOverlay = lectureModal.querySelector('.md_overlay');
+const lectureCloseButton = lectureModal.querySelector('.cancelButton');
+const lectureMessageInput = lectureModal.querySelector('.modalAnswer');
+const lectureMessageSendButton = lectureModal.querySelector('.sendButton');
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -31,6 +37,7 @@ const checkDelete = () => {
 const sendMessage = () => {
   alert('메시지가 전송되었습니다.');
   closeModal();
+  closeLectureModal();
 };
 
 const showKeyword = () => {
@@ -43,6 +50,12 @@ const showMessage = () => {
   keywordRow.classList.add('hidden');
 };
 
+const openLectureModal = () => {
+  lectureModal.classList.remove('hidden');
+};
+const closeLectureModal = () => {
+  lectureModal.classList.add('hidden');
+};
 //클릭 이벤트
 openButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
@@ -51,6 +64,11 @@ questionDeleteButton.addEventListener('click', checkDelete);
 messageSendButton.addEventListener('click', sendMessage);
 keywordButton.addEventListener('click', showKeyword);
 messageButton.addEventListener('click', showMessage);
+
+openLectureModalButton.addEventListener('click', openLectureModal);
+lectureCloseButton.addEventListener('click', closeLectureModal);
+lectureOverlay.addEventListener('click', closeLectureModal);
+lectureMessageSendButton.addEventListener('click', sendMessage);
 
 function is_mobile() {
   if (
@@ -71,3 +89,5 @@ function is_mobile() {
 
   return false;
 }
+
+//for branch
