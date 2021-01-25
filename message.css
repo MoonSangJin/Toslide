@@ -2,7 +2,8 @@
 .square,
 .menuText,
 .messageClose,
-.messageFont:hover {
+.messageFont,
+.lectureMessage:hover {
   cursor: pointer;
 }
 
@@ -205,6 +206,16 @@
   justify-content: center;
   align-items: center;
 }
+.lectureModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .md_overlay {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -216,7 +227,6 @@
   margin: 15px;
   position: relative;
   background-color: white;
-  text-align: center;
   border-radius: 6px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
 }
@@ -268,6 +278,55 @@
 .keywordPlus {
   width: 28px;
   height: 30px;
+}
+.lectureMessage {
+  font: normal normal bold 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.messageBlack {
+  width: 22px;
+  height: 22px;
+}
+.lectureModalInput {
+  all: unset;
+  width: 90%;
+  height: 154px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+}
+.lectureModalKeywordRow {
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  width: 90%;
+  height: 86px;
+  overflow-y: scroll;
+}
+.lectureModalButtonRow {
+  width: 100%;
+  height: 50px;
+  background: #f4f5f6 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 13px 13px;
+  border-top: 1px solid #dadce0;
+}
+.cancelButton {
+  width: 50%;
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #7c7d80;
+}
+.verticalLine {
+  height: 100%;
+  border-left: 1px solid #dadce0;
+}
+.sendButton {
+  width: 50%;
+  text-align: center;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #4535f3;
 }
 @media screen and (max-width: 1200px) {
   .square {
