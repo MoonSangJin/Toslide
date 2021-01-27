@@ -11,7 +11,7 @@ const toggle = () => {
     $('.message').hide();
   }
 };
-var toggleGather = () => {
+const toggleGather = () => {
   if (gathering) {
     gatherToggleBtn.src = 'asset/img-2021/PNG_수합중지.png';
     gatherToggleText.innerHTML = '수합중지';

@@ -3,8 +3,8 @@ const modal = document.querySelector('.modal');
 const overlay = modal.querySelector('.md_overlay');
 const closeButton = modal.querySelector('.modalClose');
 const messageInput = modal.querySelector('.modalAnswer');
-//const questionDeleteButton = document.getElementById('questionDelete');
-const exampleMessage = document.getElementById('msg_table');
+const questionDeleteButton = document.getElementById('questionDelete');
+const exampleMessage = document.getElementById('messageObject1');
 const messageSendButton = document.getElementById('messageSend');
 const keywordButton = document.getElementById('btnradio1');
 const messageButton = document.getElementById('btnradio2');
@@ -41,13 +41,11 @@ const sendMessage = () => {
 };
 
 const showKeyword = () => {
-  console.log("showKeyword");
   exampleMessage.classList.add('hidden');
   keywordRow.classList.remove('hidden');
 };
 
 const showMessage = () => {
-  console.log("showMessage");
   exampleMessage.classList.remove('hidden');
   keywordRow.classList.add('hidden');
 };
@@ -62,7 +60,7 @@ const closeLectureModal = () => {
 openButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
-//questionDeleteButton.addEventListener('click', checkDelete);
+questionDeleteButton.addEventListener('click', checkDelete);
 messageSendButton.addEventListener('click', sendMessage);
 keywordButton.addEventListener('click', showKeyword);
 messageButton.addEventListener('click', showMessage);
