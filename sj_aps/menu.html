@@ -23,6 +23,7 @@
     />
 
     <link href="menu.css" rel="stylesheet" />
+    <link href="menu_by_sunny.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -38,7 +39,7 @@
                   class="modeIcon"
                   src="asset/img-2021/lecture_mode_black.png"
                 />
-                <div class="menuText">강의모드</div>
+                <div class="menuText pt-1">강의모드</div>
               </div>
               <div class="vertical"></div>
               <div class="modeBlock">
@@ -46,7 +47,7 @@
                   class="modeIcon"
                   src="asset/img-2021/test_mode_black.png"
                 />
-                <div class="menuText">시험모드</div>
+                <div class="menuText pt-1">시험모드</div>
               </div>
             </div>
             <div
@@ -68,13 +69,15 @@
               />
               <div id="toggleGatherText" class="menuText">수합중지</div>
             </div>
-            <div id="toggleMessage" class="square">
+            <div id="toggleMessage" class="square includer">
               <img class="menuImage" src="asset/img-2021/message_blue.png" />
               <div class="menuText">메시지</div>
+              <span id="cmt_cnt" class="badge badge-success"></span>
             </div>
-            <div class="square">
+            <div class="square includer">
               <img class="menuImage" src="asset/img-2021/photo_blue.png" />
               <div class="menuText">사진</div>
+              <span id="photo_cnt" class="badge badge-success"></span>
             </div>
             <div class="square">
               <img class="menuImage" src="asset/img-2021/vote_blue.png" />
@@ -83,13 +86,13 @@
           </div>
           <div class="third">
             <div
-              class="roundBox d-flex justify-content-between align-items-center"
+              class="roundBox d-flex justify-content-between align-items-center p-1"
             >
               <div id="gmail">글자가 긴 gmail의 경우 뒤를 생략</div>
               <div class="logOut">로그아웃</div>
             </div>
             <div
-              class="roundBox d-flex justify-content-between align-items-center"
+              class="roundBox d-flex justify-content-between align-items-center p-1"
             >
               <img
                 class="modeIcon"
@@ -121,6 +124,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./2021.js"></script>
+    <!--<script src="./2021.js"></script>-->
+    <script src="./2021_by_sunny.js"></script>
   </body>
 </html>

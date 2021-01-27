@@ -3,16 +3,10 @@
 .menuText,
 .messageClose,
 .messageFont,
-.lectureMessage,
-.cancelButton,
-.sendButton:hover {
+.lectureMessage:hover {
   cursor: pointer;
 }
 
-html,
-body {
-  height: 100%;
-}
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 8px #0000001a;
@@ -64,7 +58,6 @@ body {
 
 .message {
   background: #f4f5f6 0% 0% no-repeat padding-box;
-  height: 100%;
 }
 .messageFile {
   display: flex;
@@ -168,7 +161,7 @@ body {
   border-radius: 5px;
 }
 .messageRow {
-  height: 60%;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
   border: 1px solid #dadce0;

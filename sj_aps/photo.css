@@ -1,18 +1,10 @@
 .logOut,
 .square,
 .menuText,
-.messageClose,
-.messageFont,
-.lectureMessage,
-.cancelButton,
-.sendButton:hover {
+.messageClose:hover {
   cursor: pointer;
 }
 
-html,
-body {
-  height: 100%;
-}
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 8px #0000001a;
@@ -64,7 +56,7 @@ body {
 
 .message {
   background: #f4f5f6 0% 0% no-repeat padding-box;
-  height: 100%;
+  height: 100vh;
 }
 .messageFile {
   display: flex;
@@ -138,8 +130,11 @@ body {
   color: #7c7d80;
 }
 .purpleFont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 70px;
-  border: 1px solid #4535f3;
+  border: 1px solid gray;
   border-radius: 13px;
   text-align: center;
   font: normal normal bold 12px/14px Roboto;
@@ -168,16 +163,10 @@ body {
   border-radius: 5px;
 }
 .messageRow {
-  height: 60%;
+  height: 400px;
   overflow-y: scroll;
   background-color: white;
   border: 1px solid #dadce0;
-}
-.messageObject {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
 }
 .messageFont {
   font: normal normal normal 12px/14px Roboto;
@@ -196,144 +185,42 @@ body {
   border-radius: 30px;
   text-align: center;
 }
-
 .purpleMessageFont {
   font: normal normal normal 14px/16px Roboto;
   letter-spacing: 0px;
   color: #ffffff;
 }
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
+.photoContainer {
+  height: 195px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+}
+.backImage {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 163px;
+  background-image: url('./asset/img-2021/example.png');
+  border-radius: 5px 5px 0px 0px;
 }
-.lectureModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.photoDescription {
+  padding: 5px;
 }
-.md_overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.messageNumber {
+  font: normal normal normal 12px/16px Roboto;
+  margin: 10px;
+  color: gray;
 }
-.md_content {
-  width: 100%;
-  margin: 15px;
-  position: relative;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+.messageObject {
+  margin: 8px;
 }
-.modalClose {
-  all: unset;
-}
-.hidden {
-  display: none;
-}
-.modalMessage {
-  font: normal normal bold 12px/14px Roboto;
+.imageName {
+  font: normal normal normal 12px/20px Roboto;
   letter-spacing: 0px;
   color: #000000;
-  opacity: 1;
 }
-.modalFont {
+.name {
   font: normal normal normal 12px/14px Roboto;
   letter-spacing: 0px;
-  color: #7c7d80;
-}
-.modalQuestion {
-  font: normal normal bold 14px/20px Roboto;
-  letter-spacing: 0px;
   color: #000000;
-  text-align: left;
-}
-.modalAnswer {
-  width: 85%;
-  height: 100%;
-  font: normal normal bold 12px/14px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-}
-.keywordWrapper {
-  display: flex;
-  justify-content: space-around;
-}
-.keywordObject {
-  border: 1px solid #4535f340;
-  border-radius: 15px;
-  font: normal normal bold 14px/16px Roboto;
-  letter-spacing: 0px;
-  color: #4535f3;
-}
-.keywordClose {
-  width: 26px;
-  height: 26px;
-}
-.keywordPlus {
-  width: 28px;
-  height: 30px;
-}
-.lectureMessage {
-  font: normal normal bold 14px/16px Roboto;
-  letter-spacing: 0px;
-  color: #000000;
-  opacity: 1;
-}
-.messageBlack {
-  width: 22px;
-  height: 22px;
-}
-.lectureModalInput {
-  all: unset;
-  width: 90%;
-  height: 154px;
-  border: 1px solid #dadce0;
-  border-radius: 5px;
-}
-.lectureModalKeywordRow {
-  border: 1px solid #dadce0;
-  border-radius: 5px;
-  width: 90%;
-  height: 86px;
-  overflow-y: scroll;
-}
-.lectureModalButtonRow {
-  width: 100%;
-  height: 50px;
-  background: #f4f5f6 0% 0% no-repeat padding-box;
-  border-radius: 0px 0px 13px 13px;
-  border-top: 1px solid #dadce0;
-}
-.cancelButton {
-  width: 50%;
-  text-align: center;
-  font: normal normal bold 16px/19px Roboto;
-  letter-spacing: 0px;
-  color: #7c7d80;
-}
-.verticalLine {
-  height: 100%;
-  border-left: 1px solid #dadce0;
-}
-.sendButton {
-  width: 50%;
-  text-align: center;
-  font: normal normal bold 16px/19px Roboto;
-  letter-spacing: 0px;
-  color: #4535f3;
 }
 @media screen and (max-width: 1200px) {
   .square {
