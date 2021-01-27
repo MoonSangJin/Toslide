@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+html,
+body {
+  height: 100%;
+}
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 8px #0000001a;
@@ -58,6 +62,7 @@
 
 .message {
   background: #f4f5f6 0% 0% no-repeat padding-box;
+  height: 100%;
 }
 .messageFile {
   display: flex;
