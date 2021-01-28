@@ -3,7 +3,7 @@ const modal = document.querySelector('.modal');
 const overlay = modal.querySelector('.md_overlay');
 const closeButton = modal.querySelector('.modalClose');
 const messageInput = modal.querySelector('.modalAnswer');
-//const questionDeleteButton = document.getElementById('questionDelete');
+const questionDeleteButton = document.getElementById('questionDelete');
 const exampleMessage = document.getElementById('msg_table');
 const messageSendButton = document.getElementById('messageSend');
 const keywordButton = document.getElementById('btnradio1');
@@ -24,6 +24,13 @@ const deleteAllCloseButton = deleteAllModal.querySelector('.cancelButton');
 const deleteAllMessageInput = deleteAllModal.querySelector('.modalAnswer');
 const deleteAllMessageSendButton = deleteAllModal.querySelector('.sendButton');
 
+const openDeleteModalButton = document.getElementById('openDeleteModal');
+const deleteModal = document.querySelector('.deleteModal');
+const deleteOverlay = deleteModal.querySelector('.md_overlay');
+const deleteCloseButton = deleteModal.querySelector('.cancelButton');
+const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
+const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
+
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -33,13 +40,7 @@ const closeModal = () => {
 };
 
 const checkDelete = () => {
-  const deleteResult = confirm('정말 삭제하시겠습니까?');
-  if (deleteResult) {
-    console.log('삭제');
-    exampleMessage.classList.add('hidden');
-  } else {
-    console.log('삭제안함');
-  }
+  openDeleteModal();
 };
 
 const sendMessage = () => {
@@ -73,11 +74,18 @@ const closeDeleteAllModal = () => {
   deleteAllModal.classList.add('hidden');
 };
 
+const openDeleteModal = () => {
+  deleteModal.classList.remove('hidden');
+};
+const closeDeleteModal = () => {
+  deleteModal.classList.add('hidden');
+};
+
 //클릭 이벤트
 openButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
-//questionDeleteButton.addEventListener('click', checkDelete);
+questionDeleteButton.addEventListener('click', checkDelete);
 messageSendButton.addEventListener('click', sendMessage);
 keywordButton.addEventListener('click', showKeyword);
 messageButton.addEventListener('click', showMessage);
@@ -90,6 +98,10 @@ lectureMessageSendButton.addEventListener('click', sendMessage);
 openDeleteAllModalButton.addEventListener('click', openDeleteAllModal);
 deleteAllCloseButton.addEventListener('click', closeDeleteAllModal);
 deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
+
+deleteCloseButton.addEventListener('click', closeDeleteModal);
+deleteOverlay.addEventListener('click', closeDeleteModal);
+
 function is_mobile() {
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -110,4 +122,4 @@ function is_mobile() {
   return false;
 }
 
-//for branch
+is_mobile();
