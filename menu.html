@@ -34,7 +34,7 @@
             <div
               class="roundBox d-flex justify-content-around align-items-center"
             >
-              <div id="lectureMode" class="modeBlock">
+              <div id="lectureMode" class="modeBlock" onclick="parent.goto_lecture_mode()">
                 <img
                   id="lectureModeIcon"
                   class="modeIcon"
@@ -43,7 +43,7 @@
                 <div class="menuText">강의모드</div>
               </div>
               <div class="vertical"></div>
-              <div id="testMode" class="modeBlock">
+              <div id="testMode" class="modeBlock" onclick="parent.goto_lecture_mode()">
                 <img
                   id="testModeIcon"
                   class="modeIcon"
@@ -52,18 +52,14 @@
                 <div class="menuText">시험모드</div>
               </div>
             </div>
-            <select class="roundBox dropdown">
+            <select class="roundBox dropdown" id="select_switch_mode">
               <option>사용법 화면 보기</option>
               <option>메시지 화면 보기</option>
             </select>
           </div>
           <div class="second">
-            <div class="square">
-              <img
-                id="toggleGather"
-                class="menuImage"
-                src="asset/img-2021/not_collecting.png"
-              />
+            <div class="square" id="toggleGather_div">
+              <img id="toggleGather" class="menuImage" src="asset/img-2021/gathering_stop.png"/>
               <div id="toggleGatherText" class="menuText">수합중지</div>
             </div>
             <div id="toggleMessage" class="square includer">
@@ -71,12 +67,12 @@
               <div class="menuText">메시지</div>
               <span id="cmt_cnt" class="badge badge-success"></span>
             </div>
-            <div class="square includer">
+            <div class="square includer" id="togglePhoto">
               <img class="menuImage" src="asset/img-2021/photo_blue.png" />
               <div class="menuText">사진</div>
               <span id="photo_cnt" class="badge badge-success"></span>
             </div>
-            <div class="square">
+            <div class="square" id="toggleVote">
               <img class="menuImage" src="asset/img-2021/vote_blue.png" />
               <div class="menuText">투표</div>
             </div>
@@ -85,19 +81,14 @@
             <div
               class="roundBox d-flex justify-content-between align-items-center"
             >
-              <div id="gmail">test01.sunnygraphy@gmail.com</div>
-              <div class="logOut">로그아웃</div>
+              <div id="gmail">long.sunnygraphy.reallylong@gmail.com</div>
+              <div class="logOut" onclick="parent.do_logout_now()">로그아웃</div>
             </div>
-            <div
-              class="roundBox d-flex justify-content-between align-items-center"
-            >
-              <img
-                class="modeIcon"
-                src="asset/img-2021/cocurrent_users_black.png"
-              />
-              <div class="menuText">접속인원</div>
+            <div       class="roundBox d-flex justify-content-between align-items-center"  >
+              <img class="modeIcon" src="asset/img-2021/cocurrent_users_black.png"  onclick="parent.show_attendance_bar()"  />
+              <div class="menuText" id="current_connected_cnt">접속인원 0</div>
 
-              <div class="logOut">자세히보기</div>
+              <div class="logOut" onclick="parent.show_attendance_bar()">자세히보기</div>
             </div>
           </div>
         </div>

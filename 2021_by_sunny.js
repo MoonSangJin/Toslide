@@ -59,7 +59,8 @@ const toggle_photo = () => {
 };
 
 
-function toggleGather (){
+function toggleGather(){
+  
   if (gathering) {
     gatherToggleBtn.src = './asset/img-2021/gathering_stop.png';
     gatherToggleText.innerHTML = '수합중지';
