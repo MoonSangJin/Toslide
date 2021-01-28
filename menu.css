@@ -39,8 +39,6 @@
   border: 1px solid #dadce0;
   border-radius: 13px;
   font: normal normal bold 12px/14px Roboto;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -55,7 +53,6 @@
   border-radius: 13px;
   width: 90px;
 }
-
 .roundBox {
   width: 210px;
   height: 28px;
@@ -99,11 +96,14 @@
   border: 1px solid #dadce0;
 }
 #gmail {
-  width: 135px;
+  width: 145px;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.dropdown {
+  border: none;
 }
 @media screen and (max-width: 1200px) {
   .square {
