@@ -25,9 +25,11 @@
   </head>
 
   <body>
-   
     <div class="message">
-      <div id="top_menu_div" class="d-flex justify-content-between align-items-center p-3">
+      <div
+        id="top_menu_div"
+        class="d-flex justify-content-between align-items-center p-3"
+      >
         <div class="messageFile">메시지파일</div>
         <div class="messageIcon">
           <img class="modeIcon mr-1" src="asset/img-2021/message_blue.png" />
@@ -46,7 +48,8 @@
             id="btnradio1"
           />
           <label class="inputLabel text-center" for="btnradio1">키워드</label>
-          <input checked
+          <input
+            checked
             type="radio"
             class="radio-input js-non-student-check"
             name="toslide-radio-btn"
@@ -60,12 +63,18 @@
         width="100%"
       />
 
-      <div id="sorting_div" class="d-flex align-items-center justify-content-around mb-2">
-        <select class="bootstrap-select sortBox" onchange="change_sorting(this)">
-          <option value="Time" selected="selected" >최신 순</option>
-          <option value="ID" >ID 순</option>
-          <option value="Name" >이름 순</option>
-          <option value="Keyword" >키워드 순</option>
+      <div
+        id="sorting_div"
+        class="d-flex align-items-center justify-content-around mb-2"
+      >
+        <select
+          class="bootstrap-select sortBox"
+          onchange="change_sorting(this)"
+        >
+          <option value="Time" selected="selected">최신 순</option>
+          <option value="ID">ID 순</option>
+          <option value="Name">이름 순</option>
+          <option value="Keyword">키워드 순</option>
         </select>
         <div>
           <label class="checkLabel" for="checkbox1">소리알림</label>
@@ -75,9 +84,12 @@
         </div>
       </div>
 
-      <div id="messages_div" class=" fixed_size_message_row messageRow d-flex flex-column">
-        <table id="msg_table" style="width: 100%;"></table>
-        <!--
+      <div
+        id="messages_div"
+        class="fixed_size_message_row messageRow d-flex flex-column"
+      >
+        <table id="msg_table" style="width: 100%">
+          <!--
           <tr>
             <div class="messageObject d-flex justify-content-around align-items-center p-1" >
                   <td><div class="messageFont">01</div></td>
@@ -149,7 +161,9 @@
         style="border: 1px color= silver; margin-top: 5px; margin-bottom: 5px"
         width="100%"
       />
-      <div class="d-flex justify-content-around align-items-center p-2 bottom_div2">
+      <div
+        class="d-flex justify-content-around align-items-center p-2 bottom_div2"
+      >
         <div class="messagePost d-flex align-items-center pr-2">
           <img class="messageClose" src="asset/img-2021/send_black.png" />
           <div id="open" class="messageFont">개인 메시지 응답</div>
@@ -163,7 +177,10 @@
           <div class="messageFont">메시지 저장</div>
         </div>
 
-        <div class="messagePost d-flex align-items-center pr-2">
+        <div
+          id="openDeleteAllModal"
+          class="messagePost d-flex align-items-center pr-2"
+        >
           <img
             class="messageClose"
             src="asset/img-2021/PNG_모두삭제_검정.png"
@@ -266,23 +283,62 @@
       </div>
     </div>
 
-    <div class="modal fade hidden" id="delete_view_modal" tabindex="-1"  data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" style="max-width: 100vw;">
+    <div class="deleteAllModal hidden">
+      <div class="md_overlay"></div>
+      <div class="md_content">
+        <div
+          class="modal_text d-flex flex-column align-items-center justify-content-center p-3"
+        >
+          <img
+            class="deleteAllImage"
+            src="asset/img-2021/delete_all_black.png"
+          />
+          <div class="lectureMessage">메시지를 모두 삭제하시겠습니까?</div>
+        </div>
+
+        <div class="lectureModalButtonRow d-flex align-items-center">
+          <div class="cancelButton">취소</div>
+          <div class="verticalLine"></div>
+          <div class="deleteAllButton">모두 삭제</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade hidden"
+      id="delete_view_modal"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="max-width: 100vw">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Delete comment</h5>
           </div>
-          <div class="modal-body" id="delete_comment_content">
-            abc
-          </div>
+          <div class="modal-body" id="delete_comment_content">abc</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="$('#delete_view_modal').modal('hide');">Cancel</button>
-            <button type="button" class="btn btn-primary" onclick="do_actual_deletion()">Delete</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              onclick="$('#delete_view_modal').modal('hide');"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="do_actual_deletion()"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>
     </div>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -303,6 +359,5 @@
 
     <script src="message.js?a=1"></script>
     <script src="message_js_by_sunny.js?a=1"></script>
-    
   </body>
 </html>

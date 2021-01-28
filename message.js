@@ -16,6 +16,14 @@ const lectureOverlay = lectureModal.querySelector('.md_overlay');
 const lectureCloseButton = lectureModal.querySelector('.cancelButton');
 const lectureMessageInput = lectureModal.querySelector('.modalAnswer');
 const lectureMessageSendButton = lectureModal.querySelector('.sendButton');
+
+const openDeleteAllModalButton = document.getElementById('openDeleteAllModal');
+const deleteAllModal = document.querySelector('.deleteAllModal');
+const deleteAllOverlay = deleteAllModal.querySelector('.md_overlay');
+const deleteAllCloseButton = deleteAllModal.querySelector('.cancelButton');
+const deleteAllMessageInput = deleteAllModal.querySelector('.modalAnswer');
+const deleteAllMessageSendButton = deleteAllModal.querySelector('.sendButton');
+
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -35,19 +43,18 @@ const checkDelete = () => {
 };
 
 const sendMessage = () => {
-  alert('메시지가 전송되었습니다.');
   closeModal();
   closeLectureModal();
 };
 
 const showKeyword = () => {
-  console.log("showKeyword");
+  console.log('showKeyword');
   exampleMessage.classList.add('hidden');
   keywordRow.classList.remove('hidden');
 };
 
 const showMessage = () => {
-  console.log("showMessage");
+  console.log('showMessage');
   exampleMessage.classList.remove('hidden');
   keywordRow.classList.add('hidden');
 };
@@ -58,6 +65,14 @@ const openLectureModal = () => {
 const closeLectureModal = () => {
   lectureModal.classList.add('hidden');
 };
+
+const openDeleteAllModal = () => {
+  deleteAllModal.classList.remove('hidden');
+};
+const closeDeleteAllModal = () => {
+  deleteAllModal.classList.add('hidden');
+};
+
 //클릭 이벤트
 openButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
@@ -72,6 +87,9 @@ lectureCloseButton.addEventListener('click', closeLectureModal);
 lectureOverlay.addEventListener('click', closeLectureModal);
 lectureMessageSendButton.addEventListener('click', sendMessage);
 
+openDeleteAllModalButton.addEventListener('click', openDeleteAllModal);
+deleteAllCloseButton.addEventListener('click', closeDeleteAllModal);
+deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
 function is_mobile() {
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
