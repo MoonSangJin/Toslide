@@ -237,7 +237,7 @@ body {
   all: unset;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .modalMessage {
   font: normal normal bold 12px/14px Roboto;
@@ -346,6 +346,18 @@ body {
 .deleteAllImage {
   width: 82px;
   height: 82px;
+}
+#openLectureModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
+}
+#mobileSendButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 6px;
 }
 @media screen and (max-width: 1200px) {
   .square {

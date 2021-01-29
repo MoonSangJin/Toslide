@@ -31,6 +31,7 @@ const deleteCloseButton = deleteModal.querySelector('.cancelButton');
 const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
 const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
+const mobileSendButton = document.getElementById('mobileSendButton');
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -108,6 +109,8 @@ function is_mobile() {
       navigator.userAgent
     )
   ) {
+    mobileSendButton.classList.remove('hidden');
+    openLectureModalButton.classList.add('hidden');
     return true;
   }
 
