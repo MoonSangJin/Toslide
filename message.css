@@ -177,6 +177,11 @@ body {
   align-items: center;
   padding: 15px;
 }
+.messageObject:active {
+  background: #f0effe 0% 0% no-repeat padding-box;
+  border-top: 1px solid #4535f3;
+  border-bottom: 1px solid #4535f3;
+}
 .messageFont {
   font: normal normal normal 12px/14px Roboto;
   letter-spacing: 0px;
