@@ -32,6 +32,20 @@ const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
 const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
 const mobileSendButton = document.getElementById('mobileSendButton');
+
+const messageObject = document.querySelectorAll('.messageObject');
+
+let messageClicked = false;
+const changeMessageObjectBackground = (i) => {
+  messageObject.forEach((i) => i.classList.remove('clicked'));
+
+  messageClicked
+    ? `${messageObject[i].classList.remove(
+        'clicked'
+      )}${(messageClicked = false)}`
+    : `${messageObject[i].classList.add('clicked')}${(messageClicked = true)}`;
+};
+
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -102,6 +116,12 @@ deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
 
 deleteCloseButton.addEventListener('click', closeDeleteModal);
 deleteOverlay.addEventListener('click', closeDeleteModal);
+
+for (let i = 0; i < messageObject.length; i++) {
+  messageObject[i].addEventListener('click', () =>
+    changeMessageObjectBackground(i)
+  );
+}
 
 function is_mobile() {
   if (

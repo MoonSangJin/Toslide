@@ -177,7 +177,7 @@ body {
   align-items: center;
   padding: 15px;
 }
-.messageObject:active {
+.clicked {
   background: #f0effe 0% 0% no-repeat padding-box;
   border-top: 1px solid #4535f3;
   border-bottom: 1px solid #4535f3;
@@ -360,6 +360,13 @@ body {
   align-items: center;
   margin: 6px;
 }
+.mobile-sendbutton {
+  font: normal normal bold 11px/16px Roboto;
+}
+.before-next {
+  width: 22px;
+  height: 22px;
+}
 @media screen and (max-width: 1200px) {
   .square {
     width: 61px;
@@ -385,9 +392,8 @@ body {
     font-size: 5px;
   }
 
-  .purpleMessageFont,
   .prevMessage,
   .messageFont {
-    font: normal normal normal 11px/16px Roboto;
+    font: normal normal bold 11px/16px Roboto;
   }
 }
