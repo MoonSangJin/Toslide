@@ -181,6 +181,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
+  border: 1px solid transparent;
 }
 .clicked {
   background: #f0effe 0% 0% no-repeat padding-box;

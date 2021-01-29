@@ -39,7 +39,10 @@ const messageObject = document.querySelectorAll('.messageObject');
 
 let messageClicked = false;
 const changeMessageObjectBackground = (i) => {
-  messageObject.forEach((i) => i.classList.remove('clicked'));
+  messageObject.forEach((i) => {
+    i.classList.remove('clicked');
+    messageClicked = false;
+  });
 
   messageClicked
     ? `${messageObject[i].classList.remove(
