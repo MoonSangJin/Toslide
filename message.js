@@ -43,27 +43,48 @@ const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 
 let messageClicked = false;
+let messageObjectIndex;
+
 const changeMessageObjectBackground = (i) => {
   messageObject.forEach((a) => {
     a.classList.remove('clicked');
     messageClicked = false;
   });
 
-  messageClicked
-    ? `${messageObject[i].classList.remove(
-        'clicked'
-      )}${(messageClicked = false)}`
-    : `${messageObject[i].classList.add('clicked')}${(messageClicked = true)}`;
+  if (i < messageObject.length) {
+    if (messageClicked) {
+      messageObject[i].classList.remove('clicked');
+      messageClicked = false;
+      messageObjectIndex = i;
+    } else {
+      messageObject[i].classList.add('clicked');
+      messageClicked = true;
+      messageObjectIndex = i;
+    }
+  } else {
+    console.log('범위벗어남');
+  }
 };
 
-let messageNumber = 0;
-prevButton.addEventListener('click', () => selectMessageObject(-1));
-nextButton.addEventListener('click', () => selectMessageObject(1));
+prevButton.addEventListener('click', () => selectPrevMessageObject());
+nextButton.addEventListener('click', () => selectNextMessageObject());
 
-const selectMessageObject = (i) => {
-  messageObject[messageNumber].classList.add('clicked');
-  messageNumber += i;
+const selectPrevMessageObject = () => {
+  if (messageObjectIndex - 1 >= 0) {
+    changeMessageObjectBackground(messageObjectIndex - 1);
+  } else {
+    console.log('벗어남');
+  }
 };
+
+const selectNextMessageObject = () => {
+  if (messageObjectIndex + 1 <= messageObject.length) {
+    changeMessageObjectBackground(messageObjectIndex + 1);
+  } else {
+    console.log('벗어남');
+  }
+};
+
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
