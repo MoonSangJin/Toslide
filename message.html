@@ -114,7 +114,7 @@
 
         <div id="keywordRow" class="keywordRow hidden">
           <table id="key_table" style="width: 100%">
-            <tr class="d-flex">
+            <tr class="d-flex flex-wrap">
               <td class="keywordObject">
                 <div class="keyword">Rendering</div>
                 <img
@@ -132,18 +132,22 @@
               </td>
 
               <td class="keywordObject">
-                <div class="keyword">Rendering</div>
+                <div class="keyword">Design</div>
                 <img
                   class="keywordClose"
                   src="asset/img-2021/close_ligh_blue.png"
                 />
+              </td>
+
+              <td class="m-1">
+                <img class="keywordPlus" src="asset/img-2021/plus_button.png" />
               </td>
             </tr>
           </table>
         </div>
       </div>
       <div id="mobileSendButton" class="messageRoundBox hidden bottom_div1">
-        <div class="d-flex align-items-center">
+        <div id="prevButton" class="d-flex align-items-center">
           <img class="before-next" src="asset/img-2021/before_button.png" />
           <div class="prevMessage">이전</div>
         </div>
@@ -154,7 +158,7 @@
           />
           <div class="mobile-sendbutton">강사 메시지 보내기</div>
         </div>
-        <div class="d-flex align-items-center">
+        <div id="nextButton" class="d-flex align-items-center">
           <div class="prevMessage">다음</div>
           <img class="before-next" src="asset/img-2021/next_button.png" />
         </div>
@@ -337,13 +341,30 @@
             class="deleteAllImage"
             src="asset/img-2021/X_or_Close_black.png"
           />
-          <div class="lectureMessage">해당 메시지를 삭제하시겠습니까?</div>
+          <div class="lectureMessage">해당 항목을 삭제하시겠습니까?</div>
         </div>
 
         <div class="lectureModalButtonRow d-flex align-items-center">
           <div class="cancelButton">취소</div>
           <div class="verticalLine"></div>
           <div class="redFontButton">삭제</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="plusModal hidden">
+      <div class="md_overlay"></div>
+      <div class="md_content">
+        <div
+          class="modal_text d-flex flex-column align-items-center justify-content-center p-3"
+        >
+          <div class="lectureMessage">키워드를 추가하시겠습니까?</div>
+        </div>
+
+        <div class="lectureModalButtonRow d-flex align-items-center">
+          <div class="cancelButton">취소</div>
+          <div class="verticalLine"></div>
+          <div class="redFontButton">추가</div>
         </div>
       </div>
     </div>

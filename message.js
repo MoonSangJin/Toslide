@@ -31,16 +31,21 @@ const deleteCloseButton = deleteModal.querySelector('.cancelButton');
 const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
 const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
+const openDeleteModalButton2 = document.querySelectorAll('.keywordClose');
+
 const mobileSendButton = document.getElementById('mobileSendButton');
 const pcSendButton = document.querySelector('.pcSendButton');
 const messageSaveButton = document.getElementById('messageSave');
 
 const messageObject = document.querySelectorAll('.messageObject');
 
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+
 let messageClicked = false;
 const changeMessageObjectBackground = (i) => {
-  messageObject.forEach((i) => {
-    i.classList.remove('clicked');
+  messageObject.forEach((a) => {
+    a.classList.remove('clicked');
     messageClicked = false;
   });
 
@@ -51,6 +56,14 @@ const changeMessageObjectBackground = (i) => {
     : `${messageObject[i].classList.add('clicked')}${(messageClicked = true)}`;
 };
 
+let messageNumber = 0;
+prevButton.addEventListener('click', () => selectMessageObject(-1));
+nextButton.addEventListener('click', () => selectMessageObject(1));
+
+const selectMessageObject = (i) => {
+  messageObject[messageNumber].classList.add('clicked');
+  messageNumber += i;
+};
 //동작함수
 const openModal = () => {
   modal.classList.remove('hidden');
@@ -131,6 +144,10 @@ for (let i = 0; i < messageObject.length; i++) {
   messageObject[i].addEventListener('click', () =>
     changeMessageObjectBackground(i)
   );
+}
+
+for (let i = 0; i < openDeleteModalButton2.length; i++) {
+  openDeleteModalButton2[i].addEventListener('click', openDeleteModal);
 }
 
 function is_mobile() {
