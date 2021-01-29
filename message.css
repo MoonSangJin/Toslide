@@ -269,6 +269,7 @@ body {
 }
 .keywordObject {
   display: flex;
+  height: 26px;
   justify-content: space-around;
   align-items: center;
   border: 1px solid #4535f340;
