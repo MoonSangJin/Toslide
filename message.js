@@ -10,7 +10,7 @@ const keywordButton = document.getElementById('btnradio1');
 const messageButton = document.getElementById('btnradio2');
 const keywordRow = document.getElementById('keywordRow');
 
-const openLectureModalButton = document.getElementById('openLectureModal');
+const openLectureModalButton = document.querySelectorAll('#openLectureModal');
 const lectureModal = document.querySelector('.lectureModal');
 const lectureOverlay = lectureModal.querySelector('.md_overlay');
 const lectureCloseButton = lectureModal.querySelector('.cancelButton');
@@ -32,6 +32,7 @@ const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
 const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
 const mobileSendButton = document.getElementById('mobileSendButton');
+const pcSendButton = document.querySelector('.pcSendButton');
 
 const messageObject = document.querySelectorAll('.messageObject');
 
@@ -105,7 +106,12 @@ messageSendButton.addEventListener('click', sendMessage);
 keywordButton.addEventListener('click', showKeyword);
 messageButton.addEventListener('click', showMessage);
 
-openLectureModalButton.addEventListener('click', openLectureModal);
+//openLectureModalButton.addEventListener('click', openLectureModal);
+
+for (let i = 0; i < openLectureModalButton.length; i++) {
+  openLectureModalButton[i].addEventListener('click', openLectureModal);
+}
+
 lectureCloseButton.addEventListener('click', closeLectureModal);
 lectureOverlay.addEventListener('click', closeLectureModal);
 lectureMessageSendButton.addEventListener('click', sendMessage);
@@ -130,7 +136,7 @@ function is_mobile() {
     )
   ) {
     mobileSendButton.classList.remove('hidden');
-    openLectureModalButton.classList.add('hidden');
+    pcSendButton.classList.add('hidden');
     return true;
   }
 
