@@ -17,6 +17,37 @@ var check_iframe_messageCenter_loaded = false;
 */
 function get_message(data,cnt)
   {
+    
+    var msg_cnt =cnt.toString();
+    var msg_hash =data.hash;
+    var msg_body =data.pure_comment_whole;
+    var msg_id =data.myidinfo ;
+    var msg_name =data.mynameinfo;
+    
+    var msg_template =``;
+
+    var hash_remove ="";
+    if(msg_hash =="")
+    {
+      hash_remove = "style='overflow:hidden;visibility:hidden'";
+
+    }
+    else
+      hash_remove = "style='overflow:hidden;cursor:pointer'";
+
+    msg_template = `
+            <td class="messageFont">`+msg_cnt+`</td>
+            <td width="50%" class="d-flex flex-column">
+              <div class="purpleFont mb-1"  onclick="toAps('`+data.id+`')" `+hash_remove+`>`+msg_hash+`</div>
+              <div class="question" onclick="toAps('`+data.id+`')" style="overflow:none">`+msg_body+`</div>
+            </td>
+            <td width="20%" class="messageFont mb-3" style="overflow:hidden">`+msg_id +` `+ msg_name+`</td>
+            <td>
+              <img id="questionDelete" onclick="delete_msg('`+data.id+`')" class="messageClose" src="asset/img-2021/PNG_닫기버튼_진회색.png" />
+            </td>
+            `;
+            
+    return msg_template;
     var msg_cnt =cnt.toString();
     var msg_hash =data.hash;
     var msg_body =data.pure_comment_whole;
@@ -25,6 +56,8 @@ function get_message(data,cnt)
     
     var msg_template =``;
     
+
+
     if(msg_hash != "")
     {
       msg_template=
@@ -72,7 +105,7 @@ function get_message(data,cnt)
   }
   function toAps(id)
   {
-    parent.show_comment_v2(id);
+    myparent.show_comment_v2(id);
   }
 
   function delete_msg(id)
@@ -91,7 +124,7 @@ function get_message(data,cnt)
   function insert_comments_into_div(data)
   {
 
-    
+        
     //console.log(data);
     sorting_by_property();
     
@@ -117,18 +150,18 @@ function get_message(data,cnt)
 
        
       tobe_deleted_rowid = id;
-      var idx = parent.find_comment_idx_using_id(id);
+      var idx = myparent.find_comment_idx_using_id(id);
       console.log("to be deleted idx",idx);
       
       if(idx != -1)
       {
          try{
-          parent.to_be_deleted_user_id = id;
-          parent.to_be_deleted_comment_v2 =idx;
+          myparent.to_be_deleted_user_id = id;
+          myparent.to_be_deleted_comment_v2 =idx;
          
           $('#delete_view_modal').modal('show');
-          parent.to_be_deleted_row_id = idx;
-          var comment= parent.comment_collections[idx].pure_comment_whole;
+          myparent.to_be_deleted_row_id = idx;
+          var comment= myparent.comment_collections[idx].pure_comment_whole;
           document.getElementById("delete_comment_content").innerHTML = comment;
          }
          catch(err)
@@ -140,8 +173,8 @@ function get_message(data,cnt)
       }
       else
       {
-        parent.to_be_deleted_comment_v2 =-1; 
-        parent.to_be_deleted_row_id = -1;
+        myparent.to_be_deleted_comment_v2 =-1; 
+        myparent.to_be_deleted_row_id = -1;
       }
 
       
@@ -149,7 +182,11 @@ function get_message(data,cnt)
 
   function hide_row()
   {
-    document.getElementById(tobe_deleted_rowid).style.display='none';
+    sorting_by_property();
+    return;
+    console.log("tobe_deleted_rowid",tobe_deleted_rowid);
+    console.log(document.getElementById(tobe_deleted_rowid));
+    document.getElementById(tobe_deleted_rowid).style.visibility='hidden';
   }
 
   function dynamicSort(property) {
@@ -170,45 +207,58 @@ function get_message(data,cnt)
 function sorting_by_property()
 {
   
-  parent.comment_collections =JSON.parse(JSON.stringify(parent.comment_collections));
-  //console.log(parent.comment_collections);
+  
+  myparent.comment_collections =JSON.parse(JSON.stringify(myparent.comment_collections));
+  //console.log(myparent.comment_collections);
 
   if(current_sorting_order =="Time")
-    parent.comment_collections.sort(dynamicSort("send_time"));
+    myparent.comment_collections.sort(dynamicSort("send_time"));
   else if(current_sorting_order =="ID")
-    parent.comment_collections.sort(dynamicSort("myidinfo"));
+  myparent.comment_collections.sort(dynamicSort("myidinfo"));
   else if(current_sorting_order =="Name")
-    parent.comment_collections.sort(dynamicSort("mynameinfo"));    
+  myparent.comment_collections.sort(dynamicSort("mynameinfo"));    
   else if(current_sorting_order =="Keyword")
-    parent.comment_collections.sort(dynamicSort("hash"));
+  myparent.comment_collections.sort(dynamicSort("hash"));
 
-  //console.log(parent.comment_collections);
+  //console.log(myparent.comment_collections);
   
   $("#msg_table tr").remove();
+  
   var table = document.getElementById("msg_table");
-  for(var i = 0; i< parent.comment_collections.length; i++)
+  table.innerHTML = "";
+  
+  for(var i = 0; i< myparent.comment_collections.length; i++)
   {
     var cnt =document.getElementById('msg_table').rows.length+1;
-    //console.log(parent.comment_collections[i]);
-    var new_msg = get_message(parent.comment_collections[i],cnt);
+    //console.log(myparent.comment_collections[i]);
+    var new_msg = get_message(myparent.comment_collections[i],cnt);
     var row = table.insertRow(0);
-    row.id = parent.comment_collections[i].id;
+    //이 클래스들이 바뀔 수 있다
+    //"messageObject d-flex justify-content-around align-items-center p-1"
+    row.classList.add("messageObject");
+    row.classList.add("d-flex");
+    row.classList.add("justify-content-around");
+    row.classList.add("align-items-center");
+    row.classList.add("p-1");
+
+    row.id = myparent.comment_collections[i].id;
     row.innerHTML =new_msg;
+    
   }
   
-  if(parent.current_comment_idx !=-1)
+  if(myparent.current_comment_idx !=-1)
     {
-      parent.recalc_current_comment_idx();
+      myparent.recalc_current_comment_idx();
     }
   
-  parent.recalc_arrows_for_comment();
+    myparent.recalc_arrows_for_comment();
   
   
 
   return;
   
-  //console.log(parent.comment_collections);
-  var clone =JSON.parse(JSON.stringify(parent.comment_collections));
+  //console.log(myparent.comment_collections);
+  var clone =JSON.parse(JSON.stringify(myparent.comment_collections));
   console.log(clone);
 
 
@@ -231,7 +281,7 @@ function sorting_by_property()
   
 
   console.log("reverse");
-  clone =JSON.parse(JSON.stringify(parent.comment_collections));
+  clone =JSON.parse(JSON.stringify(myparent.comment_collections));
   clone.sort(dynamicSort("-send_time"));
   
 
@@ -257,14 +307,14 @@ function change_sorting(selectObject) {
 function close_messagebar()
 {
   try{
-    parent.viewComment_or_photo_v2(true);
+    myparent.viewComment_or_photo_v2(true);
   }
   catch(err)
   {
 
   }
   try{
-    parent.control_div("main_div");
+    myparent.control_div("main_div");
   }
   catch(err)
   {
@@ -309,13 +359,50 @@ window.onload = function () {
 
 function do_actual_deletion()
 {
-  if(parent.kind_of_app = "toslide_control")
+
+  if(myparent.kind_of_app == "toslide_control")
   {
-    parent.actual_delete_for_message_center_for_controller();$('#delete_view_modal').modal('hide');hide_row()
+    myparent.actual_delete_for_message_center_for_controller();$('#delete_view_modal').modal('hide');hide_row();
   }
   else
   {
-    parent.actual_delete_for_message_center();$('#delete_view_modal').modal('hide');hide_row()
+    myparent.actual_delete_for_message_center();$('#delete_view_modal').modal('hide');hide_row();
   }
   
 }
+
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function drag_message_window()
+{
+           
+  setTimeout(close_messagebar,1);
+  myparent.open_standalone_message();
+         
+}
+var standalone  = false;
+var myparent = null;
+window.onload = function () {
+  
+  var status = getParameterByName("status");
+ 
+  if(status=="standalone")
+  {
+    myparent = window.opener;
+    standalone = true;
+
+    var iframe_height =    document.body.offsetHeight;
+    calc_height_for_message_bar(iframe_height);
+
+    sorting_by_property();
+  }
+  else
+  {
+    myparent = parent;
+  }
+};

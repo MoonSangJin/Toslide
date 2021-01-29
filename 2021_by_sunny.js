@@ -36,7 +36,7 @@ const toggle = () => {
   }
   parent.document.getElementById('iframe_messageCenter').style.display = "block";
   parent.document.getElementById('iframe_photoCenter').style.display = "none";
-  
+  parent.close_standalone_message_child();
   parent.viewComment_or_photo_v2(true);
  
 };

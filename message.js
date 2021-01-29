@@ -3,7 +3,7 @@ const modal = document.querySelector('.modal');
 const overlay = modal.querySelector('.md_overlay');
 const closeButton = modal.querySelector('.modalClose');
 const messageInput = modal.querySelector('.modalAnswer');
-const questionDeleteButton = document.getElementById('questionDelete');
+//const questionDeleteButton = document.getElementById('questionDelete');
 const exampleMessage = document.getElementById('msg_table');
 const messageSendButton = document.getElementById('messageSend');
 const keywordButton = document.getElementById('btnradio1');
@@ -85,7 +85,7 @@ const closeDeleteModal = () => {
 openButton.addEventListener('click', openModal);
 closeButton.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
-questionDeleteButton.addEventListener('click', checkDelete);
+//questionDeleteButton.addEventListener('click', checkDelete);
 messageSendButton.addEventListener('click', sendMessage);
 keywordButton.addEventListener('click', showKeyword);
 messageButton.addEventListener('click', showMessage);
