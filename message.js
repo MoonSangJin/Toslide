@@ -33,6 +33,7 @@ const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
 const mobileSendButton = document.getElementById('mobileSendButton');
 const pcSendButton = document.querySelector('.pcSendButton');
+const messageSaveButton = document.getElementById('messageSave');
 
 const messageObject = document.querySelectorAll('.messageObject');
 
@@ -137,6 +138,7 @@ function is_mobile() {
   ) {
     mobileSendButton.classList.remove('hidden');
     pcSendButton.classList.add('hidden');
+    messageSaveButton.classList.add('hidden');
     return true;
   }
 
