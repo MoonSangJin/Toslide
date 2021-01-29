@@ -42,6 +42,13 @@ const messageObject = document.querySelectorAll('.messageObject');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 
+const keywordPlusButton = document.querySelector('.keywordPlus');
+const keywordInput = document.querySelector('.keywordInput');
+const showKeywordInput = () => {
+  keywordPlusButton.classList.add('hidden');
+  keywordInput.classList.remove('hidden');
+};
+keywordPlusButton.addEventListener('click', showKeywordInput);
 let messageClicked = false;
 let messageObjectIndex;
 
