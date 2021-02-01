@@ -71,7 +71,7 @@ const selectPrevMessageObject = () => {
   if (messageObjectIndex - 1 >= 0) {
     changeMessageObjectBackground(messageObjectIndex - 1);
   } else {
-    console.log('벗어남');
+    console.log('이전벗어남');
   }
 };
 
@@ -79,7 +79,7 @@ const selectNextMessageObject = () => {
   if (messageObjectIndex + 1 <= messageObject.length) {
     changeMessageObjectBackground(messageObjectIndex + 1);
   } else {
-    console.log('벗어남');
+    console.log('다음벗어남');
   }
 };
 
