@@ -3,7 +3,7 @@ const keywordPlusButton = document.querySelector('.keywordPlus');
 const keywordInput = document.querySelector('.keywordInput');
 const keywordInputForm = document.querySelector('.keywordInputForm');
 const initialKeyword = document.querySelector('.initialKeyword');
-import { checkKeyWordDeleteButton } from './message.js';
+// import { checkKeyWordDeleteButton } from './message.js';
 
 const showKeywordInput = () => {
   keywordPlusButton.classList.add('hidden');
@@ -25,11 +25,24 @@ const handleSubmitKeywordInput = (e) => {
   newKeywordObject.appendChild(keywordDeleteImage);
   keywordTable.insertBefore(newKeywordObject, initialKeyword);
   keywordInputForm.reset();
-  checkKeyWordDeleteButton();
+  // checkKeyWordDeleteButton();
+  addDeleteEvent();
   keywordPlusButton.classList.remove('hidden');
   keywordInput.classList.add('hidden');
-  //새로운 키워드만들고, +버튼 보이게하고 ,input 초기화 및 사라지게
+};
+
+const addDeleteEvent = () => {
+  const keywordDeleteButton = document.querySelectorAll('.keywordClose');
+  for (let i = 0; i < keywordDeleteButton.length; i++) {
+    keywordDeleteButton[i].addEventListener('click', deleteKeyword);
+  }
+};
+
+const deleteKeyword = (e) => {
+  e.target.parentNode.remove();
 };
 
 keywordPlusButton.addEventListener('click', showKeywordInput);
 keywordInputForm.addEventListener('submit', handleSubmitKeywordInput);
+
+addDeleteEvent();

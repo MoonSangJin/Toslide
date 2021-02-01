@@ -159,12 +159,12 @@ deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
 deleteCloseButton.addEventListener('click', closeDeleteModal);
 deleteOverlay.addEventListener('click', closeDeleteModal);
 
-export function checkKeyWordDeleteButton() {
-  const keywordDeleteButton = document.querySelectorAll('.keywordClose');
-  for (let i = 0; i < keywordDeleteButton.length; i++) {
-    keywordDeleteButton[i].addEventListener('click', openDeleteModal);
-  }
-}
+// export function checkKeyWordDeleteButton() {
+//   const keywordDeleteButton = document.querySelectorAll('.keywordClose');
+//   for (let i = 0; i < keywordDeleteButton.length; i++) {
+//      keywordDeleteButton[i].addEventListener('click', openDeleteModal);
+//    }
+// }
 
 function is_mobile() {
   if (
@@ -190,4 +190,4 @@ function is_mobile() {
 }
 
 is_mobile();
-checkKeyWordDeleteButton();
+// checkKeyWordDeleteButton();

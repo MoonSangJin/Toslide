@@ -5,10 +5,18 @@
 .messageFont,
 .lectureMessage,
 .cancelButton,
-.sendButton:hover {
+.sendButton,
+.keywordClose,
+.modalMessageObject:hover {
   cursor: pointer;
 }
 
+.modalMessageObject:hover {
+  background: #f0effe 0% 0% no-repeat padding-box;
+}
+.modalMessageObject {
+  padding: 5px;
+}
 html,
 body {
   height: 100%;
