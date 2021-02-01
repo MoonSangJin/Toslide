@@ -37,7 +37,7 @@ const mobileSendButton = document.getElementById('mobileSendButton');
 const pcSendButton = document.querySelector('.pcSendButton');
 const messageSaveButton = document.getElementById('messageSave');
 
-const messageObject = document.querySelectorAll('.messageObject');
+var messageObject = null;
 
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
@@ -168,11 +168,7 @@ deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
 deleteCloseButton.addEventListener('click', closeDeleteModal);
 deleteOverlay.addEventListener('click', closeDeleteModal);
 
-for (let i = 0; i < messageObject.length; i++) {
-  messageObject[i].addEventListener('click', () =>
-    changeMessageObjectBackground(i)
-  );
-}
+
 
 for (let i = 0; i < openDeleteModalButton2.length; i++) {
   openDeleteModalButton2[i].addEventListener('click', openDeleteModal);

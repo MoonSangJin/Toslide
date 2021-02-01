@@ -15,6 +15,9 @@ var check_iframe_messageCenter_loaded = false;
   </select>
 
 */
+
+
+
 function get_message(data,cnt)
   {
     
@@ -34,14 +37,14 @@ function get_message(data,cnt)
     }
     else
       hash_remove = "style='overflow:hidden;cursor:pointer'";
-
+    
     msg_template = `
             <td class="messageFont">`+msg_cnt+`</td>
             <td width="50%" class="d-flex flex-column">
               <div class="purpleFont mb-1"  onclick="toAps('`+data.id+`')" `+hash_remove+`>`+msg_hash+`</div>
               <div class="question" onclick="toAps('`+data.id+`')" style="overflow:none">`+msg_body+`</div>
             </td>
-            <td width="20%" class="messageFont mb-3" style="overflow:hidden">`+msg_id +` `+ msg_name+`</td>
+            <td width="20%" class="messageFont mb-3" onclick="toAps('`+data.id+`')" style="overflow:hidden">`+msg_id +` `+ msg_name+`</td>
             <td>
               <img id="questionDelete" onclick="delete_msg('`+data.id+`')" class="messageClose" src="asset/img-2021/PNG_닫기버튼_진회색.png" />
             </td>
@@ -105,26 +108,42 @@ function get_message(data,cnt)
   }
   function toAps(id)
   {
-    myparent.show_comment_v2(id);
+    if(myparent.kind_of_app=="toslide_control")
+    {
+      myparent.navigate_comment_by_click(id);
+    }
+    else
+    {
+      
+      myparent.show_comment_v2(id,true);
+    }
+    
   }
 
   function delete_msg(id)
   {
-
-     
-    //console.log(id);
-    //return;
-    
+   
     delete_comment_for_message_center_iframe(id);
   }
   function sort_according_sorting_order(data,callback)
   {
     callback(true);
   }
+  var msg_newly_arrived = [];
+  function get_current_msgs_cnt()
+  {
+  
+    return msg_newly_arrived.length;
+  } 
+
+  function clear_newly_arrived_msgs()
+  {
+    msg_newly_arrived = [];
+  }
   function insert_comments_into_div(data)
   {
 
-        
+    msg_newly_arrived.push(data.email);   
     //console.log(data);
     sorting_by_property();
     
@@ -159,9 +178,12 @@ function get_message(data,cnt)
           myparent.to_be_deleted_user_id = id;
           myparent.to_be_deleted_comment_v2 =idx;
          
-          $('#delete_view_modal').modal('show');
-          myparent.to_be_deleted_row_id = idx;
+          //$('#delete_view_modal').modal('show');
           var comment= myparent.comment_collections[idx].pure_comment_whole;
+          document.getElementById("delete_a_message_body").innerHTML = comment;
+          openDeleteModal();
+          myparent.to_be_deleted_row_id = idx;
+          
           document.getElementById("delete_comment_content").innerHTML = comment;
          }
          catch(err)
@@ -204,6 +226,42 @@ function get_message(data,cnt)
         return result * sortOrder;
     }
 }
+
+
+var current_clicke_row = null;
+function clicked_a_messageObject_from_main(id)
+{
+  for(var i = 0; i <messageObject.length;i++)
+  {
+    if(id == messageObject[i].id)
+    {
+      messageObject[i].classList.add('clicked');
+      parent.clicked_messageObject = id;
+      current_clicke_row = messageObject[i];
+    }
+    else
+    {
+      messageObject[i].classList.remove('clicked');
+    }
+      
+    
+  }
+
+
+  
+  try{
+    var myElement = document.getElementById(current_clicke_row.id);
+    var topPos = myElement.offsetTop;
+    //console.log(topPos);
+    document.getElementById('messages_div').scrollTop = topPos;
+  }
+  catch(err)
+  {
+
+  }
+  
+
+}
 function sorting_by_property()
 {
   
@@ -235,26 +293,47 @@ function sorting_by_property()
     var row = table.insertRow(0);
     //이 클래스들이 바뀔 수 있다
     //"messageObject d-flex justify-content-around align-items-center p-1"
+    //"messageObject d-flex justify-content-around align-items-center p-1"      >
     row.classList.add("messageObject");
     row.classList.add("d-flex");
+    
     row.classList.add("justify-content-around");
     row.classList.add("align-items-center");
     row.classList.add("p-1");
 
     row.id = myparent.comment_collections[i].id;
     row.innerHTML =new_msg;
+
+    
     
   }
   
+  //console.log(table);
   if(myparent.current_comment_idx !=-1)
-    {
-      myparent.recalc_current_comment_idx();
-    }
-  
-    myparent.recalc_arrows_for_comment();
-  
-  
+  {
+    myparent.recalc_current_comment_idx();
+  }
 
+  myparent.recalc_arrows_for_comment();
+  
+  
+  messageObject = document.querySelectorAll('.messageObject');
+  for (let i = 0; i < messageObject.length; i++) {
+      messageObject[i].addEventListener('click', () =>
+        {
+          myparent.clicked_messageObject  = messageObject[i].id;
+          changeMessageObjectBackground(i);
+        }
+        
+      );
+  }
+
+  if(myparent.clicked_messageObject != "")
+  {
+    //alert(myparent.clicked_messageObject);
+    clicked_a_messageObject_from_main(myparent.clicked_messageObject);
+  }
+  //console.log(messageObject[0].id);
   return;
   
   //console.log(myparent.comment_collections);
@@ -345,28 +424,37 @@ function calc_height_for_message_bar(iframe_height)
 
   var whole_height = this.innerHeight;
 
-  var h = whole_height - sorting_div_height -tab_div_height-top_menu_div_height -bottom_div1_height - bottom_div2_height -80;
+  var h = whole_height - sorting_div_height -tab_div_height-top_menu_div_height -bottom_div1_height  -190;
   console.log("window",window.innerHeight);
   console.log("whole height ",this.innerHeight);
   console.log("calc h",h);
-  $('.fixed_size_message_row').css("height" , h+"px");
+  $('.fixed_size_message_row').css("height" , (h)+"px");
   
   
 }
-window.onload = function () {
+
+function do_actual_deletion_from_remote_command(id)
+{
+  myparent.to_be_deleted_user_id = id;
+  myparent.to_be_deleted_comment_v2 =myparent.find_comment_idx_using_id(id);
+  deleteModal.classList.add('hidden');
+  myparent.actual_delete_for_message_center();hide_row();
  
-};
+}
 
 function do_actual_deletion()
 {
 
   if(myparent.kind_of_app == "toslide_control")
   {
-    myparent.actual_delete_for_message_center_for_controller();$('#delete_view_modal').modal('hide');hide_row();
+   
+    deleteModal.classList.add('hidden');
+    myparent.actual_delete_for_message_center_for_controller();hide_row();
   }
   else
   {
-    myparent.actual_delete_for_message_center();$('#delete_view_modal').modal('hide');hide_row();
+    deleteModal.classList.add('hidden');
+    myparent.actual_delete_for_message_center();hide_row();
   }
   
 }
@@ -380,7 +468,8 @@ function getParameterByName(name) {
 
 function drag_message_window()
 {
-           
+  if(parent.kind_of_app =="toslide_control")        
+    return;
   setTimeout(close_messagebar,1);
   myparent.open_standalone_message();
          
@@ -395,7 +484,7 @@ window.onload = function () {
   {
     myparent = window.opener;
     standalone = true;
-
+    
     var iframe_height =    document.body.offsetHeight;
     calc_height_for_message_bar(iframe_height);
 

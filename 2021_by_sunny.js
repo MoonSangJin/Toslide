@@ -23,7 +23,8 @@ const toggleGather_div = document.getElementById('toggleGather_div');
 const gatherToggleText = document.getElementById('toggleGatherText');
 //const closeButton = document.getElementById('closeButton');
 var gathering = false;
-const toggle = () => {
+function toggle()
+{
 
   console.log("photo block",parent.document.getElementById('iframe_messageCenter').style.display);
   if(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_photoCenter').style.display=="block" )
@@ -40,7 +41,8 @@ const toggle = () => {
   parent.viewComment_or_photo_v2(true);
  
 };
-const toggle_photo = () => {
+function  toggle_photo()
+{
 
   
   console.log("message block",parent.document.getElementById('iframe_messageCenter').style.display);
