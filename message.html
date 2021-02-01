@@ -35,7 +35,11 @@
           <img class="modeIcon mr-1" src="asset/img-2021/message_blue.png" />
           메시지
         </div>
-        <img class="messageClose" src="asset/img-2021/close_gray.png" onclick="parent.close_message_window()" />
+        <img
+          class="messageClose"
+          src="asset/img-2021/close_gray.png"
+          onclick="parent.close_message_window()"
+        />
       </div>
       <div id="tab_div">
         <div
@@ -84,14 +88,15 @@
         </div>
       </div>
 
-      <div     id="messages_div"    class="fixed_size_message_row messageRow d-flex flex-column"  >
-        <table id="msg_table" style=" width: 100%; table-layout: fixed">
- 
-        </table>
+      <div
+        id="messages_div"
+        class="fixed_size_message_row messageRow d-flex flex-column"
+      >
+        <table id="msg_table" style="width: 100%; table-layout: fixed"></table>
 
         <div id="keywordRow" class="keywordRow hidden">
           <table id="key_table" style="width: 100%">
-            <tr class="d-flex flex-wrap align-items-center">
+            <tr id="keywordTable" class="d-flex flex-wrap align-items-center">
               <td class="keywordObject">
                 <div class="keyword">Rendering</div>
                 <img
@@ -101,7 +106,7 @@
               </td>
 
               <td class="keywordObject">
-                <div class="keyword">Rendering</div>
+                <div class="keyword">Example</div>
                 <img
                   class="keywordClose"
                   src="asset/img-2021/close_ligh_blue.png"
@@ -116,9 +121,14 @@
                 />
               </td>
 
-              <td>
+              <td class="initialKeyword">
                 <img class="keywordPlus" src="asset/img-2021/plus_button.png" />
-                <input class="keywordInput hidden keywordObject" type="text" />
+                <form class="keywordInputForm">
+                  <input
+                    class="keywordInput hidden keywordObject"
+                    type="text"
+                  />
+                </form>
               </td>
             </tr>
           </table>
@@ -320,14 +330,14 @@
             src="asset/img-2021/X_or_Close_black.png"
           />
           <div class="lectureMessage" id="delete_a_message_body"></div>
-          
+
           <div class="lectureMessage">해당 항목을 삭제하시겠습니까?</div>
         </div>
 
         <div class="lectureModalButtonRow d-flex align-items-center">
           <div class="cancelButton">취소</div>
           <div class="verticalLine"></div>
-          <div class="redFontButton"  onclick="do_actual_deletion()">삭제</div>
+          <div class="redFontButton" onclick="do_actual_deletion()">삭제</div>
         </div>
       </div>
     </div>
@@ -402,7 +412,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="message.js?a=11"></script>
+    <script type="module" src="message.js"></script>
+    <script type="module" src="keyword.js"></script>
     <script src="message_js_by_sunny.js?a=11"></script>
   </body>
 </html>

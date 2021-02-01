@@ -31,8 +31,6 @@ const deleteCloseButton = deleteModal.querySelector('.cancelButton');
 const deleteMessageInput = deleteModal.querySelector('.modalAnswer');
 const deleteMessageSendButton = deleteModal.querySelector('.sendButton');
 
-const openDeleteModalButton2 = document.querySelectorAll('.keywordClose');
-
 const mobileSendButton = document.getElementById('mobileSendButton');
 const pcSendButton = document.querySelector('.pcSendButton');
 const messageSaveButton = document.getElementById('messageSave');
@@ -42,13 +40,6 @@ var messageObject = null;
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 
-const keywordPlusButton = document.querySelector('.keywordPlus');
-const keywordInput = document.querySelector('.keywordInput');
-const showKeywordInput = () => {
-  keywordPlusButton.classList.add('hidden');
-  keywordInput.classList.remove('hidden');
-};
-keywordPlusButton.addEventListener('click', showKeywordInput);
 let messageClicked = false;
 let messageObjectIndex;
 
@@ -168,10 +159,11 @@ deleteAllOverlay.addEventListener('click', closeDeleteAllModal);
 deleteCloseButton.addEventListener('click', closeDeleteModal);
 deleteOverlay.addEventListener('click', closeDeleteModal);
 
-
-
-for (let i = 0; i < openDeleteModalButton2.length; i++) {
-  openDeleteModalButton2[i].addEventListener('click', openDeleteModal);
+export function checkKeyWordDeleteButton() {
+  const keywordDeleteButton = document.querySelectorAll('.keywordClose');
+  for (let i = 0; i < keywordDeleteButton.length; i++) {
+    keywordDeleteButton[i].addEventListener('click', openDeleteModal);
+  }
 }
 
 function is_mobile() {
@@ -198,3 +190,4 @@ function is_mobile() {
 }
 
 is_mobile();
+checkKeyWordDeleteButton();
