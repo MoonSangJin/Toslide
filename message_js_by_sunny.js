@@ -386,7 +386,7 @@ function change_sorting(selectObject) {
 function close_messagebar()
 {
   try{
-    myparent.viewComment_or_photo_v2(true);
+    myparent.viewComment_or_photo_v2("message");
   }
   catch(err)
   {

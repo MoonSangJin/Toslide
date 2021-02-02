@@ -18,6 +18,7 @@
 const messageToggleBtn = document.getElementById('toggleMessage');
 const photoToggleBtn = document.getElementById('togglePhoto');
 const gatherToggleBtn = document.getElementById('toggleGather');
+const voteToggleBtn = document.getElementById('toggleVote');
 const toggleGather_div = document.getElementById('toggleGather_div');
 
 const gatherToggleText = document.getElementById('toggleGatherText');
@@ -27,7 +28,8 @@ function toggle()
 {
 
   console.log("photo block",parent.document.getElementById('iframe_messageCenter').style.display);
-  if(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_photoCenter').style.display=="block" )
+  
+  if((parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_photoCenter').style.display=="block") ||(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_voteCenter').style.display=="block")  )
   {
     console.log("zap in toggle photo");
 
@@ -37,26 +39,46 @@ function toggle()
   }
   parent.document.getElementById('iframe_messageCenter').style.display = "block";
   parent.document.getElementById('iframe_photoCenter').style.display = "none";
+  parent.document.getElementById('iframe_voteCenter').style.display = "none";
   parent.close_standalone_message_child();
-  parent.viewComment_or_photo_v2(true);
+  parent.viewComment_or_photo_v2("message");
  
 };
+function toggle_vote()
+{
+  parent.document.getElementById('iframe_voteCenter').contentWindow.getting_voting_data();
+  if((parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_messageCenter').style.display=="block") ||(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_photoCenter').style.display=="block")  )
+  {
+    parent.document.getElementById('split_toslide_right').style.display ="none";
+
+    
+
+    console.log("zap in toggle message");
+    parent.zap_right_div();
+    
+  }
+  parent.document.getElementById('iframe_voteCenter').style.display = "block";
+  parent.document.getElementById('iframe_messageCenter').style.display = "none";
+  parent.document.getElementById('iframe_photoCenter').style.display = "none";
+  parent.viewComment_or_photo_v2("vote");
+  
+}
 function  toggle_photo()
 {
 
   
   console.log("message block",parent.document.getElementById('iframe_messageCenter').style.display);
-  if(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_messageCenter').style.display=="block" )
+  if((parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_messageCenter').style.display=="block") ||(parent.document.getElementById('split_toslide_right').style.display=="block" && parent.document.getElementById('iframe_voteCenter').style.display=="block")  )
   {
     parent.document.getElementById('split_toslide_right').style.display ="none";
     console.log("zap in toggle message");
     parent.zap_right_div();
     
   }
-
+  parent.document.getElementById('iframe_voteCenter').style.display = "none";
   parent.document.getElementById('iframe_messageCenter').style.display = "none";
   parent.document.getElementById('iframe_photoCenter').style.display = "block";
-  parent.viewComment_or_photo_v2(false);
+  parent.viewComment_or_photo_v2("photo");
  
 };
 
@@ -88,3 +110,4 @@ photoToggleBtn.onclick = toggle_photo;
 //closeButton.onclick = toggle;
 //gatherToggleBtn.onclick = toggleGather;
 toggleGather_div.onclick = toggleGather;
+voteToggleBtn.onclick = toggle_vote;
