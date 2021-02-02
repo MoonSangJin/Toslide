@@ -5,10 +5,34 @@
 .messageFont,
 .lectureMessage,
 .cancelButton,
-.sendButton:hover {
+.sendButton,
+.keywordClose,
+.modalMessageObject,
+.keywordPlus:hover {
   cursor: pointer;
 }
 
+.modalMessageObject:hover {
+  background: #f0effe 0% 0% no-repeat padding-box;
+}
+
+.modalMessageObject {
+  padding: 5px;
+}
+
+.keywordInput {
+  all: unset;
+  display: flex;
+  width: 100px;
+  height: 26px;
+  border: 1px solid #4535f340;
+  border-radius: 15px;
+  font: normal normal bold 14px/16px Roboto;
+  letter-spacing: 0px;
+  color: #4535f3;
+  padding-left: 10px;
+  margin: 8px;
+}
 html,
 body {
   height: 100%;

@@ -26,12 +26,12 @@ const handleSubmitKeywordInput = (e) => {
   keywordTable.insertBefore(newKeywordObject, initialKeyword);
   keywordInputForm.reset();
   // checkKeyWordDeleteButton();
-  addDeleteEvent();
+  addKeywordDeleteEvent();
   keywordPlusButton.classList.remove('hidden');
   keywordInput.classList.add('hidden');
 };
 
-const addDeleteEvent = () => {
+const addKeywordDeleteEvent = () => {
   const keywordDeleteButton = document.querySelectorAll('.keywordClose');
   for (let i = 0; i < keywordDeleteButton.length; i++) {
     keywordDeleteButton[i].addEventListener('click', deleteKeyword);
@@ -45,4 +45,4 @@ const deleteKeyword = (e) => {
 keywordPlusButton.addEventListener('click', showKeywordInput);
 keywordInputForm.addEventListener('submit', handleSubmitKeywordInput);
 
-addDeleteEvent();
+addKeywordDeleteEvent();
