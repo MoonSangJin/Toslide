@@ -4,6 +4,7 @@
 .messageClose:hover {
   cursor: pointer;
 }
+
 .whiteRow {
   background-color: #f4f5f6;
   padding: 10px;
@@ -21,16 +22,15 @@
 .second {
   display: flex;
   justify-content: space-between;
+  margin-left: 91px;
+  margin-right: 93px;
 }
 .third {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.third .roundBox {
-  padding-left: 5px;
-  padding-right: 5px;
-}
+
 .logOut {
   display: block;
   justify-content: center;
@@ -39,6 +39,11 @@
   border: 1px solid #dadce0;
   border-radius: 13px;
   font: normal normal bold 12px/14px Roboto;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-right: 3px;
 }
 .mode {
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -51,17 +56,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 13px;
-  width: 90px;
+  width: 100px;
+  height: 20px;
 }
 .roundBox {
   width: 210px;
-  height: 28px;
+  height: 26px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 8px #0000001a;
   border-radius: 13px;
   opacity: 1;
   margin: 3px;
-  padding: 3px;
   font: normal normal bold 12px/14px Roboto;
   letter-spacing: 0px;
   color: #000000;
@@ -88,22 +93,32 @@
   height: 38px;
 }
 .modeIcon {
-  width: 23px;
-  height: 23px;
+  width: 26px;
+  height: 26px;
 }
 .vertical {
   height: 80%;
   border: 1px solid #dadce0;
 }
 #gmail {
-  width: 145px;
+  width: 135px;
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-left: 9px;
 }
 .dropdown {
+  width: 195px;
   border: none;
+  font: normal normal bold 12px/14px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  margin-left: 6px;
+  margin-right: 4px;
+}
+.connecting {
+  margin-left: 3px;
 }
 @media screen and (max-width: 1200px) {
   .square {
