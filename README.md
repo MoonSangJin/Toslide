@@ -3,8 +3,6 @@
 Large Audience into Active Contributors
 </h2>
 
-<br>
-
 ## Author
 
 👤 **MoonSangJin**
