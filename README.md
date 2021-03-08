@@ -11,8 +11,8 @@ Large Audience into Active Contributors
 
 ## Working Directory
 
-- Menu : https://moonsangjin.github.io/Toslide/menu.html
-- Message : https://moonsangjin.github.io/Toslide/message.html
+- Menu : https://moonsangjin.github.io/Toslide/pages/menu.html
+- Message : https://moonsangjin.github.io/Toslide/pages/message.html
 - ActiveWindows : https://github.com/MoonSangJin/Toslide-onlineTest
 
 ## Actual Service Site
