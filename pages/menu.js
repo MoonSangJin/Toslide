@@ -8,11 +8,11 @@ const selectLectureMode = () => {
   if (background.backgroundColor == 'rgba(0, 0, 0, 0)') {
     lectureMode.style.backgroundColor = '#4535F3';
     lectureMode.style.color = 'white';
-    lectrueModeIcon.src = 'asset/img-2021/lecture_mode_white.png';
+    lectrueModeIcon.src = '../asset/img-2021/lecture_mode_white.png';
   } else {
     lectureMode.style.backgroundColor = 'rgba(0, 0, 0, 0)';
     lectureMode.style.color = 'black';
-    lectrueModeIcon.src = 'asset/img-2021/lecture_mode_black.png';
+    lectrueModeIcon.src = '../asset/img-2021/lecture_mode_black.png';
   }
 };
 
@@ -21,11 +21,11 @@ const selectTestMode = () => {
   if (background.backgroundColor == 'rgba(0, 0, 0, 0)') {
     testMode.style.backgroundColor = '#4535F3';
     testMode.style.color = 'white';
-    testModeIcon.src = 'asset/img-2021/test_mode_white.png';
+    testModeIcon.src = '../asset/img-2021/test_mode_white.png';
   } else {
     testMode.style.backgroundColor = 'rgba(0, 0, 0, 0)';
     testMode.style.color = 'black';
-    testModeIcon.src = 'asset/img-2021/test_mode_black.png';
+    testModeIcon.src = '../asset/img-2021/test_mode_black.png';
   }
 };
 
