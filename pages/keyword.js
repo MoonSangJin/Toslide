@@ -16,7 +16,7 @@ const handleSubmitKeywordInput = (e) => {
   const newKeywordObject = document.createElement('td');
   const newKeyword = document.createElement('div');
   const keywordDeleteImage = document.createElement('img');
-  keywordDeleteImage.src = 'asset/img-2021/close_ligh_blue.png';
+  keywordDeleteImage.src = '../asset/img-2021/close_ligh_blue.png';
   keywordDeleteImage.setAttribute('class', 'keywordClose');
   newKeywordObject.setAttribute('class', 'keywordObject');
   newKeyword.setAttribute('class', 'keyword');

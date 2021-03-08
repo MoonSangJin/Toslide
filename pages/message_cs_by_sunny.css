@@ -3,12 +3,11 @@
 }
 .bottom_div1 {
   position: fixed;
-  /* width: 100%; */
+  width: 100%;
   bottom: 60px;
   left: 0;
   right: 0;
 }
-
 
 .fixed_size_message_row {
   /* height:1vh; */
